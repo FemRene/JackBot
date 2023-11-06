@@ -1,11 +1,18 @@
 import math
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
+#_______________________________________________________________________________________________________________________
+#while loop und While not loops
+name = ""
+while len(name) ==0:
+    name = input("Wie ist dein Name?: ")
 
-name = input("Wie ist dein Name?: ")
+age = None
+while not age:
+    age = int(input("Wie alt bist du?: "))
 
-age = int(input("Wie alt bist du?: "))
-
-height = float(input("Wie groß bist du?: "))
+height = None
+while not height:
+    height = float(input("Wie groß bist du?: "))
 
 my_name = "Jack Saering"
 
@@ -74,7 +81,7 @@ print(website1[slice])
 
 #_______________________________________________________________________________________________________________________
 #if statements
-#logical operator (and,or)
+#logical operator (and,or,not)
 
 if age == 100:
     print("GZ du alter sack!")
@@ -87,9 +94,15 @@ else:
 
 temp = int(input("Wie warm ist es heute?: "))
 
-if temp >= 0 and temp <= 30:
-    print("Temperatur geht voll klar!")
-elif temp < 0 or temp > 30:
+if not(temp >= 0 and temp <= 30):
     print("übel das schlimme Wetter!")
+elif not(temp < 0 or temp > 30):
+    print("Temperatur geht voll klar!")
 else:
     print("Scheiß wetter!")
+#_______________________________________________________________________________________________________________________
+#while loops: werden solange ausgeführt bis sich die Parameter ändern
+#while not: seihe Zeile 4-14!!!!!!
+
+#while 1==1:
+    #print("Hilfe ich stecke Fest")
