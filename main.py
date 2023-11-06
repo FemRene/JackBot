@@ -1,4 +1,5 @@
 import math
+#https://www.youtube.com/watch?v=XKHEtdqhLK8
 
 name = input("Wie ist dein Name?: ")
 
