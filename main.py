@@ -1,5 +1,5 @@
 import math
-#https://www.youtube.com/watch?v=XKHEtdqhLK8
+#https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 
 name = input("Wie ist dein Name?: ")
 
