@@ -145,16 +145,16 @@ zahl1 = int(input("Welche zahl?: "))
 zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
 summe = None
 
-if operandie =="+":
+if operandie == '+':
     summe = zahl1 + zahl2
     print(summe)
-elif operandie =="-":
+elif operandie == '-':
     summe = zahl1 - zahl2
     print(summe)
-elif operandie =="*":
+elif operandie == '*':
     summe = zahl1 * zahl2
     print(summe)
-elif operandie =="/":
+elif operandie == '/':
     summe = zahl1 / zahl2
     print(summe)
 else:
@@ -187,3 +187,6 @@ elif vrank =="Radiant":
     print("Touch Grass")
 else:
     print("Uranked? ganz schön lame")
+
+#_______________________________________________________________________________________________________________________
+
