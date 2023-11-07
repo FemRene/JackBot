@@ -142,6 +142,22 @@ for i in range(rows):
     #print("Ich finde Sortieren langweilig!")
 
 #_______________________________________________________________________________________________________________________
+#listen = werden benutzt um mehr als eine Variable in einer Variable zu verstauen
+
+valoranks = ["Iron","Bronze","Silber","Gold","Platin","Diamond","Ascendent","Immortal","Radiant"]
+
+print(valoranks[0])
+
+#List commands
+
+#valoranks.append("Unranked")
+#valoranks.remove("Iron")
+#valoranks.pop() #removes last index
+#valoranks.insert(7,"Ascendent")
+#valoranks.sort() #alpabetisch
+#valoranks.clear()
+
+#_______________________________________________________________________________________________________________________
 #loop control statements
 #break=beendet den loop komplett
 #continue=Skippt den nächsten loop zyklus
