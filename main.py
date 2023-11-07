@@ -136,15 +136,33 @@ for i in range(rows):
     print()
 #_______________________________________________________________________________________________________________________
 
-while 1==1:
-    print("Orthografitrainer ist kacke!")
-    print("Die Deutsche Sprache macht micht Aggresiv!")
-    print("Ich finde Sortieren langweilig!")
+#while 1==1:
+    #print("Orthografitrainer ist kacke!")
+    #print("Die Deutsche Sprache macht micht Aggresiv!")
+    #print("Ich finde Sortieren langweilig!")
 
 #_______________________________________________________________________________________________________________________
+#loop control statements
+#break=beendet den loop komplett
+#continue=Skippt den nächsten loop zyklus
+#pass=macht garnichts ist einfach ein Platzhalter
 
-print("möchtest du:"+str(name)+"dich mit")
+while True:
+    loopname = input("Wer geht dir am meisten auf den Sack?: ")
+    if loopname != "":
+        break
 
+telefonnummer = "+49-1523-4567890"
+
+for i in telefonnummer:
+    if i == "-":
+        continue
+    print(i, end="")
+
+for i in range (1,21):
+    if i == "13":
+        pass
+    print(i)
 #_______________________________________________________________________________________________________________________
 
 
@@ -176,8 +194,8 @@ sqrt = None
 
 while not sqrt:
     sqrt = float(input("Von welcher zahl willst du die Quadratwurzel?: "))
-sqrt = math.sqrt
-print("Die Wurzel deiner Zahl ist: "+str(sqrt))
+
+print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
 
 #_______________________________________________________________________________________________________________________
 #Hochrechnen
@@ -186,7 +204,7 @@ pwrrechnen = None
 pwrhoch = None
 
 while not pwrrechnen:
-    pwrrechnen = int(input("Zahl 1?: "))
+    pwrrechnen = int(input("Welche Zahl soll hoch gerechnet werden?: "))
 
 while not pwrhoch:
     pwrhoch = int(input("Hoch wie viel?: "))
@@ -211,7 +229,7 @@ while not grundwert:
 
 prozentsatz = prozentwert * 100 / grundwert
 
-print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)"%")
+print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 
 #_______________________________________________________________________________________________________________________
 
