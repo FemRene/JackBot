@@ -163,7 +163,7 @@ while not vrank:
     vrank = input("Welchen Rank hast du in Valorant?: ")
 
 if vrank =="Iron":
-    print("hier könnte ihre Werbung stehen")
+    print("Hör auf, auf die ")
 elif vrank =="Bronze":
     print("hier könnte ihre Werbung stehen")
 elif vrank =="Silver":
