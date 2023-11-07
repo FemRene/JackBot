@@ -1,7 +1,8 @@
 import math
+import time
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
-#while loop und While not loops
+#while loop und While not loops mehr info auf ZEILE 105
 name = ""
 while len(name) ==0:
     name = input("Wie ist dein Name?: ")
@@ -102,7 +103,30 @@ else:
     print("Scheiß wetter!")
 #_______________________________________________________________________________________________________________________
 #while loops: werden solange ausgeführt bis sich die Parameter ändern
-#while not: seihe Zeile 4-14!!!!!!
+#while not: siehe Zeile 4-14!!!!!!
 
 #while 1==1:
     #print("Hilfe ich stecke Fest")
+#_______________________________________________________________________________________________________________________
+#for loop ein loop der eine bestimmte anzahl wiederholt wird
+#for i in range(10):
+    #print(i+1)
+
+#for i in range (50,100+1,2): #(start,ende,schritte)
+    #print(i)
+
+for seconds in range(3,-3,-1):
+    print(seconds)
+    time.sleep(1)
+print("Du hast echt geduld.")
+#_______________________________________________________________________________________________________________________
+#nested loops (ein loop in einem loop)
+
+rows = int(input("Wie viele reihen soll das Quadrat haben?: "))
+collums = int(input("Wie viele Zeilen soll es haben?: "))
+zeichen = (input("Welches Zeichen soll verwendet werden?: "))
+
+for i in range(rows):
+    for j in range (collums):
+        print(zeichen, end="")
+    print()
