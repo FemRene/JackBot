@@ -7,6 +7,10 @@ name = ""
 while len(name) ==0:
     name = input("Wie ist dein Name?: ")
 
+partner_name = ""
+while len(partner_name) ==0:
+    partner_name = input("Wie ist der name deines Partners?: ")
+
 age = None
 while not age:
     age = int(input("Wie alt bist du?: "))
@@ -139,6 +143,11 @@ while 1==1:
 
 #_______________________________________________________________________________________________________________________
 
+print("möchtest du:"+str(name)+"dich mit")
+
+#_______________________________________________________________________________________________________________________
+
+
 
 operandie = input("Wie willst du rechnen?(+ - / *): ")
 zahl1 = int(input("Welche zahl?: "))
@@ -161,6 +170,51 @@ else:
     print("dann halt nicht")
 
 #_______________________________________________________________________________________________________________________
+#Wurzel ziehen
+
+sqrt = None
+
+while not sqrt:
+    sqrt = float(input("Von welcher zahl willst du die Quadratwurzel?: "))
+sqrt = math.sqrt
+print("Die Wurzel deiner Zahl ist: "+str(sqrt))
+
+#_______________________________________________________________________________________________________________________
+#Hochrechnen
+
+pwrrechnen = None
+pwrhoch = None
+
+while not pwrrechnen:
+    pwrrechnen = int(input("Zahl 1?: "))
+
+while not pwrhoch:
+    pwrhoch = int(input("Hoch wie viel?: "))
+
+hochsumme = pow(pwrrechnen, pwrhoch)
+print(str(pwrrechnen)+" Hoch "+str(pwrhoch)+" = "+str(hochsumme))
+
+#_______________________________________________________________________________________________________________________
+#Prozent rechnen
+
+prozentwert = None
+grundwert = None
+
+while not prozentwert:
+    prozentwert = float(input("Was ist der Prozentwert(Kleine Zahl)?: "))
+
+
+
+
+while not grundwert:
+    grundwert = float(input("Was ist der Grundwert(Hohe Zahl)?: "))
+
+prozentsatz = prozentwert * 100 / grundwert
+
+print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)"%")
+
+#_______________________________________________________________________________________________________________________
+
 
 vrank = None
 
