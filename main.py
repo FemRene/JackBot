@@ -163,22 +163,22 @@ while not vrank:
     vrank = input("Welchen Rank hast du in Valorant?: ")
 
 if vrank =="Iron":
-    print("Hör auf, auf die ")
+    print("Hör auf, auf die Füße zu schauen!")
 elif vrank =="Bronze":
-    print("hier könnte ihre Werbung stehen")
+    print("Aimlabs = Free")
 elif vrank =="Silver":
-    print("hier könnte ihre Werbung stehen")
+    print("Coachings + YT is free = KOMM IN DIE GRUPPE!")
 elif vrank =="Gold":
-    print("hier könnte ihre Werbung stehen")
+    print("Hör auf zu fillen!")
 elif vrank =="Platin":
-    print("hier könnte ihre Werbung stehen")
+    print("Dein Ego ist größer als meine Zukunft!")
 elif vrank =="Diamond":
-    print("hier könnte ihre Werbung stehen")
+    print("Vllt mal Strats üben = Freelo")
 elif vrank =="Ascendent":
-    print("hier könnte ihre Werbung stehen")
+    print("Hardstuck 4 Life UwU")
 elif vrank =="Immortal":
-    print("hier könnte ihre Werbung stehen")
+    print("No Brain but aim/Dont cheat on your E-Kittens")
 elif vrank =="Radiant":
-    print("hier könnte ihre Werbung stehen")
+    print("Touch Grass")
 else:
     print("Uranked? ganz schön lame")
