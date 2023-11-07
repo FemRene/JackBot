@@ -142,17 +142,43 @@ while 1==1:
 
 operandie = int(input("Wie willst du rechnen?(+ - / *): "))
 zahl1 = int(input("Welche zahl?: "))
-zahl2 = int(input("Soll mit welcher Zahl berechnet werden?"))
+zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
 
 if operandie =="+":
     print(int(zahl1)+int(zahl2))
-elif operarndie =="-":
+elif operandie =="-":
     print(int(zahl1)-int(zahl2))
-elif operarndie =="*":
+elif operandie =="*":
     print(int(zahl1)*int(zahl2))
-elif operarndie =="/":
+elif operandie =="/":
     print(int(zahl1)/int(zahl2))
 else:
     print("dann halt nicht")
 
-#______________________________________________________________________________________________________________________
+#_______________________________________________________________________________________________________________________
+
+vrank = None
+
+while not vrank:
+    vrank = input("Welchen Rank hast du in Valorant?: ")
+
+if vrank =="Iron":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Bronze":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Silver":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Gold":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Platin":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Diamond":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Ascendent":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Immortal":
+    print("hier könnte ihre Werbung stehen")
+elif vrank =="Radiant":
+    print("hier könnte ihre Werbung stehen")
+else:
+    print("Uranked? ganz schön lame")
