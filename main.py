@@ -140,7 +140,7 @@ while 1==1:
 #_______________________________________________________________________________________________________________________
 
 
-operandie = int(input("Wie willst du rechnen?(+ - / *): "))
+operandie = input("Wie willst du rechnen?(+ - / *): ")
 zahl1 = int(input("Welche zahl?: "))
 zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
 summe = None
@@ -159,7 +159,7 @@ elif operandie =="/":
     print(summe)
 else:
     print("dann halt nicht")
-    
+
 #_______________________________________________________________________________________________________________________
 
 vrank = None
