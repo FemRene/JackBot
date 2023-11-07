@@ -130,3 +130,27 @@ for i in range(rows):
     for j in range (collums):
         print(zeichen, end="")
     print()
+#_______________________________________________________________________________________________________________________
+
+while 1==1:
+    print("Orthografitrainer ist kacke!")
+    print("Die Deutsche Sprache macht micht Aggresiv!")
+    print("Ich finde Sortieren langweilig!")
+
+#_______________________________________________________________________________________________________________________
+
+
+operandie = int(input("Wie willst du rechnen?(+ - / *): "))
+zahl1 = int(input("Welche zahl?: "))
+zahl2 = int(input("Soll mit welcher Zahl berechnet werden?"))
+
+if operandie =="+"
+    print(int(zahl1)+int(zahl2))
+elif operarndie =="-":
+    print(int(zahl1)-int(zahl2))
+elif operarndie =="*":
+    print(int(zahl1)*int(zahl2))
+elif operarndie =="/":
+    print(int(zahl1)/int(zahl2))
+else:
+    print("dann halt nicht")
