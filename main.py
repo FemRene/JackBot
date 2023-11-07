@@ -143,18 +143,23 @@ while 1==1:
 operandie = int(input("Wie willst du rechnen?(+ - / *): "))
 zahl1 = int(input("Welche zahl?: "))
 zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
+summe = None
 
 if operandie =="+":
-    print(int(zahl1)+int(zahl2))
+    summe = zahl1 + zahl2
+    print(summe)
 elif operandie =="-":
-    print(int(zahl1)-int(zahl2))
+    summe = zahl1 - zahl2
+    print(summe)
 elif operandie =="*":
-    print(int(zahl1)*int(zahl2))
+    summe = zahl1 * zahl2
+    print(summe)
 elif operandie =="/":
-    print(int(zahl1)/int(zahl2))
+    summe = zahl1 / zahl2
+    print(summe)
 else:
     print("dann halt nicht")
-
+    
 #_______________________________________________________________________________________________________________________
 
 vrank = None
