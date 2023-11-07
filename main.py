@@ -144,7 +144,7 @@ operandie = int(input("Wie willst du rechnen?(+ - / *): "))
 zahl1 = int(input("Welche zahl?: "))
 zahl2 = int(input("Soll mit welcher Zahl berechnet werden?"))
 
-if operandie =="+"
+if operandie =="+":
     print(int(zahl1)+int(zahl2))
 elif operarndie =="-":
     print(int(zahl1)-int(zahl2))
@@ -154,3 +154,5 @@ elif operarndie =="/":
     print(int(zahl1)/int(zahl2))
 else:
     print("dann halt nicht")
+
+#______________________________________________________________________________________________________________________
