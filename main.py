@@ -140,13 +140,33 @@ for i in range(rows):
     #print("Orthografitrainer ist kacke!")
     #print("Die Deutsche Sprache macht micht Aggresiv!")
     #print("Ich finde Sortieren langweilig!")
+#_______________________________________________________________________________________________________________________
+#tuple ähnlich wie listen aber nicht änderbar
+
+student = ("Jack",25,"male")
+print(student.count("Jack"))
+print(student.index("male"))
+
+for x in student:
+    print (x)
+
+if "Jack" in student:
+    print("Jack ist da!")
+else:
+    print("Jack ist abwesend!")
+
+
 
 #_______________________________________________________________________________________________________________________
 #listen = werden benutzt um mehr als eine Variable in einer Variable zu verstauen
+#2d lists= Listen von listen
 
 valoranks = ["Iron","Bronze","Silber","Gold","Platin","Diamond","Ascendent","Immortal","Radiant"]
+students = ["Jonas","Cora","Johanna","Maxim"]
 
-print(valoranks[0])
+noobs = [valoranks, students]
+
+print(valoranks[0][1])
 
 #List commands
 
