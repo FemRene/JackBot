@@ -134,6 +134,7 @@ for i in range(rows):
     for j in range (collums):
         print(zeichen, end="")
     print()
+
 #_______________________________________________________________________________________________________________________
 
 #while 1==1:
@@ -230,7 +231,16 @@ for i in range (1,21):
         pass
     print(i)
 #_______________________________________________________________________________________________________________________
+#
+klassenliste = {}
 
+yn = input("Willst du jemanden zu Klassenliste hinzufügen oder sie abrufen?")
+if yn =""
+
+
+
+#_______________________________________________________________________________________________________________________
+#Taschenrechner
 
 
 operandie = input("Wie willst du rechnen?(+ - / *): ")
@@ -298,6 +308,7 @@ prozentsatz = prozentwert * 100 / grundwert
 print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 
 #_______________________________________________________________________________________________________________________
+#dreisatz
 drei_satz_pvariable0 = None
 drei_satz_pvariable1 = None
 drei_satz_avariable0 = None
@@ -318,7 +329,7 @@ if drei_satz_avariable1 <0:
 
 
 #_______________________________________________________________________________________________________________________
-
+#valo zeugs
 
 vrank = None
 
