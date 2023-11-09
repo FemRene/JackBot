@@ -235,7 +235,10 @@ for i in range (1,21):
 klassenliste = {}
 
 yn = input("Willst du jemanden zu Klassenliste hinzufügen oder sie abrufen?")
-if yn =""
+if yn =="hinzufügen":
+    input("Bitte Name, Klasse")
+    
+
 
 
 
