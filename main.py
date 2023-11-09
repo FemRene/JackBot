@@ -155,6 +155,36 @@ if "Jack" in student:
 else:
     print("Jack ist abwesend!")
 
+#_______________________________________________________________________________________________________________________
+#dictionary = veränderbare variablen paare mit einem einzigartigen key, sehr schnell, benutzen hashing
+#KÖNNEN GEÄNDERT BZW GEUPDATED WERDEN WÄREND DAS PROGRAMM LÄUFT!
+
+mitschueler = {'Jonas':'IT-Klasse',
+               'Jack':'IT-Klasse',
+               'Paul':'Kaufmann',
+               'eyecandy':'Kaufmann',
+               'Wiland':'IT-Klasse'}
+
+mitschueler.update({'Cora':'IT-Klasse'})
+mitschueler.update({'Wiland':'Kaufmann'})
+
+#print(mitschueler.get('Jack'))
+
+for key,value in mitschueler.items():
+    print(key,value)
+
+
+#_______________________________________________________________________________________________________________________
+#set = ansammlung von unegordneten variablen, keine dublikate
+geschirr = {"messer","gabel","löffel"}
+geschirr1 = {"flache Teller", "tiefe Teller","Schüssel","löffel"}
+
+#geschirr.update(geschirr1)
+essens_tisch = geschirr.union(geschirr1)
+
+#print(geschirr.difference(geschirr1))
+for x in geschirr:
+    print(x)
 
 
 #_______________________________________________________________________________________________________________________
