@@ -233,14 +233,16 @@ for i in range (1,21):
 #_______________________________________________________________________________________________________________________
 #
 klassenliste = {}
+klvalue = ""
 
 yn = input("Willst du jemanden zu Klassenliste hinzufügen oder sie abrufen?")
 if yn =="hinzufügen":
-    input("Bitte Name, Klasse")
-    
+    klvalue = input("Bitte:Name, Klasse: ")
+    klassenliste.update(klvalue)
 
-
-
+elif yn =="abrufen":
+    if x in klassenliste:
+        print(x)
 
 #_______________________________________________________________________________________________________________________
 #Taschenrechner
