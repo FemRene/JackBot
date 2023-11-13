@@ -392,20 +392,14 @@ if yn =="hinzufügen":
 elif yn =="abrufen":
     if x in klassenliste:
         print(x)
-
 #_______________________________________________________________________________________________________________________
-#Taschenrechner
-
-
-
-#_______________________________________________________________________________________________________________________
-
 #valo zeugs
 
 vrank = None
 
 while not vrank:
     vrank = input("Welchen Rank hast du in Valorant?: ")
+    vrank.upper[0]
 
 if vrank =="Iron":
     print("Hör auf, auf die Füße zu schauen!")
