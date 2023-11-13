@@ -25,12 +25,15 @@ def int_input(text):
 #_______________________________________________________________________________________________________________________
 #dreisatz
 def dreisatz():
+    y = input("Willst du denn Dreisatz ausrechnen?(Y/N): ")
 
-    drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
-    drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
-    drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
+    while y =="Y":
+        drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
+        drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
+        drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
 
-    dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+        dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+    if y =="N":
 
     if dsumme <0:
         print("Die Antwort ist: "+str(dsumme))
@@ -41,13 +44,18 @@ def dreisatz():
 def anti_dreisatz():
     y = input("Willst du denn antiporportionalen Dreisatz ausrechnen?(Y/N): ")
 
-    while :
+    while y=="Y":
         dreisatz_pvariable0 = float_input("Wie lautet die erste Zahl in deinem Satz?: ")
         dreisatz_pvariable1 = float_input("Wie lautet die zweite Zahl in deinem Satz?: ")
         dreisatz_avariable0 = float_input("Wie lautet die Partner Zahl der Zahl die gesucht wird?: ")
 
         dpsummer = dreisatz_pvariable1 / dreisatz_pvariable0
         gsumme = dreisatz_avariable0 / dpsummer
+        print("Die Antwort ist: "+str(gsumme))
+
+    if y=="N":
+        pass
+    
 
 
 
