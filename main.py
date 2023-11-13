@@ -266,7 +266,6 @@ elif yn =="abrufen":
 #_______________________________________________________________________________________________________________________
 #Taschenrechner
 
-
 operandie = input("Wie willst du rechnen?(+ - / *): ")
 zahl1 = int(input("Welche zahl?: "))
 zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
