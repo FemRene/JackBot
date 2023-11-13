@@ -2,6 +2,25 @@ import math
 import time
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
+def dreisatz():
+    drei_satz_pvariable0 = None
+    drei_satz_pvariable1 = None
+    drei_satz_avariable0 = None
+
+    while not drei_satz_pvariable0:
+        drei_satz_pvariable0 = float(input("Was ist die erste proportionale Zahl?: "))
+
+    while not drei_satz_pvariable1:
+        drei_satz_pvariable1 = float(input("Was ist die zweite proportionale Zahl?: "))
+
+    while not drei_satz_pvariable0:
+        drei_satz_avariable0 = float(input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): "))
+
+    drei_satz_avariable1 = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+
+    if drei_satz_avariable1 <0:
+        print("Die Antwort ist: "+str(drei_satz_avariable1))
+#_______________________________________________________________________________________________________________________        
 #while loop und While not loops mehr info auf ZEILE 105
 name = ""
 while len(name) ==0:
@@ -314,23 +333,7 @@ print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 
 #_______________________________________________________________________________________________________________________
 #dreisatz
-drei_satz_pvariable0 = None
-drei_satz_pvariable1 = None
-drei_satz_avariable0 = None
 
-while not drei_satz_pvariable0:
-    drei_satz_pvariable0 = float(input("Was ist die erste proportionale Zahl?: "))
-
-while not drei_satz_pvariable1:
-    drei_satz_pvariable1 = float(input("Was ist die zweite proportionale Zahl?: "))
-
-while not drei_satz_pvariable0:
-    drei_satz_avariable0 = float(input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): "))
-
-drei_satz_avariable1 = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
-
-if drei_satz_avariable1 <0:
-    print("Die Antwort ist: "+str(drei_satz_avariable1))
 
 
 #_______________________________________________________________________________________________________________________
