@@ -1,21 +1,31 @@
 import math
 import time
+
+def float_input(text):
+    v = None
+    while not v:
+        v = float(input(text))
+    return v
+
+def string_input(text):
+    x = ""
+    while len() ==0:
+        x = input(text)
+    return x
+
+def int_input(text):
+    y = None
+    while not y:
+        y = int(input(text))
+    return y
+
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
 #dreisatz
 def dreisatz():
-    drei_satz_pvariable0 = None
-    drei_satz_pvariable1 = None
-    drei_satz_avariable0 = None
-
-    while not drei_satz_pvariable0:
-        drei_satz_pvariable0 = float(input("Was ist die erste proportionale Zahl?: "))
-
-    while not drei_satz_pvariable1:
-        drei_satz_pvariable1 = float(input("Was ist die zweite proportionale Zahl?: "))
-
-    while not drei_satz_pvariable0:
-        drei_satz_avariable0 = float(input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): "))
+    drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
+    drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
+    drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
 
     drei_satz_avariable1 = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
 
@@ -81,20 +91,17 @@ def hochrechnen():
 #_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 name = ""
-while len(name) ==0:
-    name = input("Wie ist dein Name?: ")
+string_input(name)
 
 partner_name = ""
-while len(partner_name) ==0:
-    partner_name = input("Wie ist der name deines Partners?: ")
+string_input(partner_name)
 
 age = None
-while not age:
-    age = int(input("Wie alt bist du?: "))
+int_input(age)
 
 height = None
-while not height:
-    height = float(input("Wie groß bist du?: "))
+float_input(height)
+
 
 my_name = "Jack Saering"
 
