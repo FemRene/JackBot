@@ -1,5 +1,6 @@
 import math
 import time
+#_______________________________________________________________________________________________________________________
 
 def float_input(text):
     v = None
@@ -19,6 +20,7 @@ def int_input(text):
         y = int(input(text))
     return y
 
+#_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
 #dreisatz
@@ -32,6 +34,18 @@ def dreisatz():
     if drei_satz_avariable1 <0:
         print("Die Antwort ist: "+str(drei_satz_avariable1))
 #_______________________________________________________________________________________________________________________
+#_______________________________________________________________________________________________________________________
+#dreisatz_antiproportional
+
+def anti_dreisatz():
+    dreisatz_pvariable0 = float_input("W")
+    dreisatz_pvariable1 = float_input()
+    dreisatz_avariable0 = float_input()
+
+
+
+#_______________________________________________________________________________________________________________________
+
 #taschenrechner
 def taschenrechner():
     operandie = input("Wie willst du rechnen?(+ - / *): ")
