@@ -33,6 +33,8 @@ def dreisatz():
         drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
 
         dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+        print("Die Antwort ist: "+str(dsumme))
+        
     if y =="N":
         pass
 
@@ -56,12 +58,6 @@ def anti_dreisatz():
     if y=="N":
         pass
     
-
-
-
-
-
-
 #_______________________________________________________________________________________________________________________
 
 #taschenrechner
