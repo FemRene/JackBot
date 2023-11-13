@@ -34,9 +34,9 @@ def dreisatz():
 
         dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
     if y =="N":
+        pass
 
-    if dsumme <0:
-        print("Die Antwort ist: "+str(dsumme))
+        
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #dreisatz_antiproportional
