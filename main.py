@@ -58,6 +58,7 @@ def anti_dreisatz():
         y= input_yes_no("Willst du denn antiporportionalen Dreisatz ausrechnen?(Y/N): ")
         if not y:
             break
+
         dreisatz_pvariable0 = float_input("Wie lautet die erste Zahl in deinem Satz?: ")
         dreisatz_pvariable1 = float_input("Wie lautet die zweite Zahl in deinem Satz?: ")
         dreisatz_avariable0 = float_input("Wie lautet die Partner Zahl der Zahl die gesucht wird?: ")
@@ -65,7 +66,6 @@ def anti_dreisatz():
         dpsummer = dreisatz_pvariable1 / dreisatz_pvariable0
         gsumme = dreisatz_avariable0 / dpsummer
         print("Die Antwort ist: "+str(gsumme))
-        break
     
 #_______________________________________________________________________________________________________________________
 
@@ -100,6 +100,12 @@ def taschenrechner():
 #Prozent rechnen
 
 def prozentrechnen():
+
+    while True:
+        x = input_yes_no("Willst du Prozentrechnen?(Y/N): ")
+        if not x:
+            break
+
     prozentwert = None
     grundwert = None
 
@@ -120,6 +126,11 @@ def prozentrechnen():
 #hochrechnen
 
 def hochrechnen():
+
+    while True:
+        x = input_yes_no("Willst du Hochrechnen?(Y/N): ")
+        if not x:
+            break
     
     pwrrechnen = None
     pwrhoch = None
@@ -137,6 +148,11 @@ def hochrechnen():
 #Wurzel ziehen
 
 def sqrt():
+    while True:
+        y = input_yes_no("Willst du die Wurzel einer Zahl?(Y/N): ")
+        if not y:
+            break
+
     sqrt = None
 
     float_input(sqrt)
@@ -148,9 +164,16 @@ def hello(name):
     print("Hallo "+name)
     print("https://pointerpointer.com/")
 #_______________________________________________________________________________________________________________________
+#_______________________________________________________________________________________________________________________
+#_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 
 dreisatz()
+anti_dreisatz()
+taschenrechner()
+sqrt()
+hochrechnen()
+prozentrechnen()
 
 name = string_input("Wie ist dein name?: ")
 
