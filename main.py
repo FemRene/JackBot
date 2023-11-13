@@ -25,22 +25,32 @@ def int_input(text):
 #_______________________________________________________________________________________________________________________
 #dreisatz
 def dreisatz():
+
     drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
     drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
     drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
 
-    drei_satz_avariable1 = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+    dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
 
-    if drei_satz_avariable1 <0:
-        print("Die Antwort ist: "+str(drei_satz_avariable1))
+    if dsumme <0:
+        print("Die Antwort ist: "+str(dsumme))
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #dreisatz_antiproportional
 
 def anti_dreisatz():
-    dreisatz_pvariable0 = float_input("W")
-    dreisatz_pvariable1 = float_input()
-    dreisatz_avariable0 = float_input()
+    y = input("Willst du denn antiporportionalen Dreisatz ausrechnen?(Y/N): ")
+
+    while :
+        dreisatz_pvariable0 = float_input("Wie lautet die erste Zahl in deinem Satz?: ")
+        dreisatz_pvariable1 = float_input("Wie lautet die zweite Zahl in deinem Satz?: ")
+        dreisatz_avariable0 = float_input("Wie lautet die Partner Zahl der Zahl die gesucht wird?: ")
+
+        dpsummer = dreisatz_pvariable1 / dreisatz_pvariable0
+        gsumme = dreisatz_avariable0 / dpsummer
+
+
+
 
 
 
@@ -87,6 +97,7 @@ def prozentrechnen():
     print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 #_______________________________________________________________________________________________________________________
 #hochrechnen
+
 def hochrechnen():
     
     pwrrechnen = None
@@ -101,6 +112,14 @@ def hochrechnen():
     hochsumme = pow(pwrrechnen, pwrhoch)
     print(str(pwrrechnen)+" Hoch "+str(pwrhoch)+" = "+str(hochsumme))
 
+#_______________________________________________________________________________________________________________________
+#Wurzel ziehen
+
+def sqrt():
+    sqrt = None
+
+    float_input(sqrt)
+    print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
 
 #_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
@@ -348,27 +367,7 @@ elif yn =="abrufen":
 
 
 #_______________________________________________________________________________________________________________________
-#Wurzel ziehen
 
-sqrt = None
-
-while not sqrt:
-    sqrt = float(input("Von welcher zahl willst du die Quadratwurzel?: "))
-
-print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
-
-#_______________________________________________________________________________________________________________________
-#Hochrechnen
-
-
-
-
-#_______________________________________________________________________________________________________________________
-#dreisatz
-
-
-
-#_______________________________________________________________________________________________________________________
 #valo zeugs
 
 vrank = None
