@@ -20,7 +20,28 @@ def dreisatz():
 
     if drei_satz_avariable1 <0:
         print("Die Antwort ist: "+str(drei_satz_avariable1))
-#_______________________________________________________________________________________________________________________        
+#_______________________________________________________________________________________________________________________
+def taschenrechner():
+    operandie = input("Wie willst du rechnen?(+ - / *): ")
+    zahl1 = int(input("Welche zahl?: "))
+    zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
+    summe = None
+
+    if operandie == '+':
+        summe = zahl1 + zahl2
+        print(summe)
+    elif operandie == '-':
+        summe = zahl1 - zahl2
+        print(summe)
+    elif operandie == '*':
+        summe = zahl1 * zahl2
+        print(summe)
+    elif operandie == '/':
+        summe = zahl1 / zahl2
+        print(summe)
+    else:
+        print("dann halt nicht")
+#_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 name = ""
 while len(name) ==0:
@@ -266,25 +287,7 @@ elif yn =="abrufen":
 #_______________________________________________________________________________________________________________________
 #Taschenrechner
 
-operandie = input("Wie willst du rechnen?(+ - / *): ")
-zahl1 = int(input("Welche zahl?: "))
-zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
-summe = None
 
-if operandie == '+':
-    summe = zahl1 + zahl2
-    print(summe)
-elif operandie == '-':
-    summe = zahl1 - zahl2
-    print(summe)
-elif operandie == '*':
-    summe = zahl1 * zahl2
-    print(summe)
-elif operandie == '/':
-    summe = zahl1 / zahl2
-    print(summe)
-else:
-    print("dann halt nicht")
 
 #_______________________________________________________________________________________________________________________
 #Wurzel ziehen
