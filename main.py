@@ -8,10 +8,10 @@ def float_input(text):
         v = float(input(text))
     return v
 
-def string_input(text):
+def string_input(name):
     x = ""
-    while len() ==0:
-        x = input(text)
+    while len(x) ==0:
+        x = input(name)
     return x
 
 def int_input(text):
@@ -44,9 +44,8 @@ def dreisatz():
 
         dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
         print("Die Antwort ist: "+str(dsumme))
+        break
 
-    if y =="N":
-        pass
 
         
 #_______________________________________________________________________________________________________________________
@@ -64,33 +63,32 @@ def anti_dreisatz():
         dpsummer = dreisatz_pvariable1 / dreisatz_pvariable0
         gsumme = dreisatz_avariable0 / dpsummer
         print("Die Antwort ist: "+str(gsumme))
-
-    if y=="N":
-        pass
+        break
     
 #_______________________________________________________________________________________________________________________
 
 #taschenrechner
 def taschenrechner():
-    operandie = input("Wie willst du rechnen?(+ - / *): ")
-    zahl1 = int(input("Welche zahl?: "))
-    zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
-    summe = None
 
-    if operandie == '+':
-        summe = zahl1 + zahl2
-        print(summe)
-    elif operandie == '-':
-        summe = zahl1 - zahl2
-        print(summe)
-    elif operandie == '*':
-        summe = zahl1 * zahl2
-        print(summe)
-    elif operandie == '/':
-        summe = zahl1 / zahl2
-        print(summe)
-    else:
-        print("dann halt nicht")
+        operandie = input("Wie willst du rechnen?(+ - / *): ")
+        zahl1 = int(input("Welche zahl?: "))
+        zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
+        summe = None
+
+        if operandie == '+':
+            summe = zahl1 + zahl2
+            print(summe)
+        elif operandie == '-':
+            summe = zahl1 - zahl2
+            print(summe)
+        elif operandie == '*':
+            summe = zahl1 * zahl2
+            print(summe)
+        elif operandie == '/':
+            summe = zahl1 / zahl2
+            print(summe)
+        else:
+            print("dann halt nicht")
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
 
@@ -138,22 +136,23 @@ def sqrt():
     print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
 
 #_______________________________________________________________________________________________________________________
+#functions = I WILL NOT REPEAT MY CODE!
+def hello(name):
+    print("Hallo "+name)
+    print("https://pointerpointer.com/")
+#_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
-name = ""
-string_input(name)
+name = string_input("Wie ist dein name?: ")
 
-partner_name = ""
-string_input(partner_name)
+partner_name = string_input("Wie ist der name deines Partners?: ")
 
-age = None
-int_input(age)
+age = int_input("Wie alt bist du?: ")
 
-height = None
-float_input(height)
-
+height = float_input("Wie groß bist du?: ")
 
 my_name = "Jack Saering"
 
+hello(name)
                                                                                                                         #int
 #age += 1
 pi = 3.14
@@ -184,10 +183,26 @@ print(Jack)
 print(Jonas)
 print(Cora)
 print(Johanna)
+#_______________________________________________________________________________________________________________________
+#index operator [] = nnützlich um aus sequenzen einzelne part raus zu picken
+if(name[0].islower()):
+    name = name.capitalize()
+    print("Hier dein name mit großem anfangsbuchstaben: " + str(name))
+
+
+
+first_name = name[:4].upper()
+last_name = name[5:].upper()
+last_character_name = name[-1]
+
+print("dein vor name ist: "+str(first_name))
+print("Dein Nachname ist"+str(last_name))
+print(last_character_name)
+
 
 #_______________________________________________________________________________________________________________________
 
-print(name*4)                                                                                                           #wie oft soll etwas displayd wer
+print(name*4)#wie oft soll etwas displayd wer
 
 
 
@@ -340,6 +355,7 @@ print(valoranks[0][1])
 #valoranks.insert(7,"Ascendent")
 #valoranks.sort() #alpabetisch
 #valoranks.clear()
+#_______________________________________________________________________________________________________________________
 
 #_______________________________________________________________________________________________________________________
 #loop control statements
