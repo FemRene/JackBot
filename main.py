@@ -2,6 +2,7 @@ import math
 import time
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
+#dreisatz
 def dreisatz():
     drei_satz_pvariable0 = None
     drei_satz_pvariable1 = None
@@ -21,6 +22,7 @@ def dreisatz():
     if drei_satz_avariable1 <0:
         print("Die Antwort ist: "+str(drei_satz_avariable1))
 #_______________________________________________________________________________________________________________________
+#taschenrechner
 def taschenrechner():
     operandie = input("Wie willst du rechnen?(+ - / *): ")
     zahl1 = int(input("Welche zahl?: "))
@@ -41,6 +43,41 @@ def taschenrechner():
         print(summe)
     else:
         print("dann halt nicht")
+#_______________________________________________________________________________________________________________________
+#Prozent rechnen
+def prozentrechnen():
+    prozentwert = None
+    grundwert = None
+
+    while not prozentwert:
+        prozentwert = float(input("Was ist der Prozentwert(Kleine Zahl)?: "))
+
+
+
+
+    while not grundwert:
+        grundwert = float(input("Was ist der Grundwert(Hohe Zahl)?: "))
+
+    prozentsatz = prozentwert * 100 / grundwert
+
+    print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
+#_______________________________________________________________________________________________________________________
+#hochrechnen
+def hochrechnen():
+    
+    pwrrechnen = None
+    pwrhoch = None
+
+    while not pwrrechnen:
+        pwrrechnen = int(input("Welche Zahl soll hoch gerechnet werden?: "))
+
+    while not pwrhoch:
+        pwrhoch = int(input("Hoch wie viel?: "))
+
+    hochsumme = pow(pwrrechnen, pwrhoch)
+    print(str(pwrrechnen)+" Hoch "+str(pwrhoch)+" = "+str(hochsumme))
+
+
 #_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 name = ""
@@ -302,36 +339,8 @@ print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
 #_______________________________________________________________________________________________________________________
 #Hochrechnen
 
-pwrrechnen = None
-pwrhoch = None
-
-while not pwrrechnen:
-    pwrrechnen = int(input("Welche Zahl soll hoch gerechnet werden?: "))
-
-while not pwrhoch:
-    pwrhoch = int(input("Hoch wie viel?: "))
-
-hochsumme = pow(pwrrechnen, pwrhoch)
-print(str(pwrrechnen)+" Hoch "+str(pwrhoch)+" = "+str(hochsumme))
-
-#_______________________________________________________________________________________________________________________
-#Prozent rechnen
-
-prozentwert = None
-grundwert = None
-
-while not prozentwert:
-    prozentwert = float(input("Was ist der Prozentwert(Kleine Zahl)?: "))
 
 
-
-
-while not grundwert:
-    grundwert = float(input("Was ist der Grundwert(Hohe Zahl)?: "))
-
-prozentsatz = prozentwert * 100 / grundwert
-
-print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 
 #_______________________________________________________________________________________________________________________
 #dreisatz
