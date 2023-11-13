@@ -20,6 +20,16 @@ def int_input(text):
         y = int(input(text))
     return y
 
+def input_yes(text):
+    x = input(text)
+    while x=="Y":
+        break
+
+def input_no(text):
+
+    if x=="N":
+        pass
+
 #_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
@@ -34,7 +44,7 @@ def dreisatz():
 
         dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
         print("Die Antwort ist: "+str(dsumme))
-        
+
     if y =="N":
         pass
 
@@ -83,6 +93,7 @@ def taschenrechner():
         print("dann halt nicht")
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
+
 def prozentrechnen():
     prozentwert = None
     grundwert = None
@@ -99,6 +110,7 @@ def prozentrechnen():
     prozentsatz = prozentwert * 100 / grundwert
 
     print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
+
 #_______________________________________________________________________________________________________________________
 #hochrechnen
 
