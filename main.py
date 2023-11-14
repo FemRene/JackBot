@@ -78,7 +78,6 @@ def anti_dreisatz():
         print("Die Antwort ist: "+str(gsumme))
     
 #_______________________________________________________________________________________________________________________
-
 #taschenrechner
 def taschenrechner():
 
@@ -106,6 +105,18 @@ def taschenrechner():
             print(summe)
         else:
             continue
+#_______________________________________________________________________________________________________________________
+
+def ntaschenrechner():
+    while True:
+        y = input_yes_no("Taschenrechner nutzen?(Y/N): ")
+        if not y:
+            break
+    operandie = input("Wie willst du rechnen?(+ - / *): ")
+
+    if operandie =="+":
+        
+
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
 
@@ -204,7 +215,7 @@ def kelvin_celsius():
         gradh = float_input("Wie viel Grad?: ")
         kelvinh = gradh + 273.25
         print(str(gradh)+"°C sind: "+str(kelvinh)+"Kelvin")
-        
+
 #_______________________________________________________________________________________________________________________
 
 
