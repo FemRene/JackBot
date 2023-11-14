@@ -196,7 +196,7 @@ def kelvin_celsius():
 
         gradh = float_input("Wie viel Grad?: ")
         kelvinh = gradh + 273.25
-        print(str(gradh)"°C sind: "+str(kelvinh)+"Kelvin")
+        print(str(gradh)+"°C sind: "+str(kelvinh)+"Kelvin")
 
 #_______________________________________________________________________________________________________________________
 #valo zeug
