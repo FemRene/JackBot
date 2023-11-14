@@ -1,36 +1,42 @@
 import math
 import time
 #_______________________________________________________________________________________________________________________
-
+#https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
+#_______________________________________________________________________________________________________________________
+#functions = I WILL NOT REPEAT MY CODE!
+def hello(name):
+    print("Hallo "+name)
+    print("https://pointerpointer.com/")
+#_______________________________________________________________________________________________________________________
+#_______________________________________________________________________________________________________________________
+#float while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
 def float_input(text):
     v = None
     while not v:
         v = float(input(text))
     return v
-
+#_______________________________________________________________________________________________________________________
+#string while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
 def string_input(name):
     x = ""
     while len(x) ==0:
         x = input(name)
     return x
-
+#_______________________________________________________________________________________________________________________
+#int while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
 def int_input(text):
     y = None
     while not y:
         y = int(input(text))
     return y
-
+#_______________________________________________________________________________________________________________________
+#Input schleife mit boolean wenn der Input(Y) ist dann gibt er TRUE zurück andernfalls False
 def input_yes_no(text):
-    y = input(text)
+    y.upper[0] = input(text)
     if y=="Y":
         return True
     else:
         return False
-
-
-
-#_______________________________________________________________________________________________________________________
-#https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
 #dreisatz
 def dreisatz():
@@ -39,6 +45,7 @@ def dreisatz():
         y = input_yes_no("Willst du ein dreisatz ausrechen?(Y/N): ")
         if not y:
             break
+        
         drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
         drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
         drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
@@ -46,9 +53,6 @@ def dreisatz():
         dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
         print("Die Antwort ist: "+str(dsumme))
 
-
-        
-#_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #dreisatz_antiproportional
 
@@ -95,7 +99,7 @@ def taschenrechner():
             summe = zahl1 / zahl2
             print(summe)
         else:
-            print("dann halt nicht")
+            continue
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
 
@@ -159,21 +163,93 @@ def sqrt():
     print("Die Wurzel deiner Zahl ist: "+str(math.sqrt(sqrt)))
 
 #_______________________________________________________________________________________________________________________
-#functions = I WILL NOT REPEAT MY CODE!
-def hello(name):
-    print("Hallo "+name)
-    print("https://pointerpointer.com/")
+#Satz des Pythagoras
+
+def pythago():
+    while True:
+        y = input_yes_no("Willst du den Satz des Pythagoras ausrechnen?(Y/N): ")
+        if not y:
+            break
+
+    seite_a = float_input("Wie lang ist seite A?: ")
+    seite_b = float_input("Wie lang ist seite B?: ")
+
+    seite_c = seite_a + seite_b
+    print("Die größe der Seite C ist "+str(seite_c)+"²")
+    
 #_______________________________________________________________________________________________________________________
+#Kelvin in Celsius
+def kelvin_celsius():
+    while True:
+        y = input_yes_no("Kelvin/Celsius Umrechner benutzen?(Y/N): ")
+        if not y:
+            break
+    x[0:0] = input("Welche einheit soll umgerechnet werden?(Grad/Kelvin): ")
+    
+    if x.upper=="K":
+
+        kelvinh = float_input("Wie viel Kelvin?: ")
+        grads = kelvin - 273.15
+        print(str(kelvin)+"Kelvin sind: "+str(grad)+"°C")
+
+    else:
+
+        gradh = float_input("Wie viel Grad?: ")
+        kelvinh = gradh + 273.25
+        print(str(gradh)"°C sind: "+str(kelvinh)+"Kelvin")
+
+#_______________________________________________________________________________________________________________________
+#valo zeug
+def valo():
+
+    while True:
+        x = input_yes_no()
+        if not x:
+            break
+
+        vrank = None
+
+        while not vrank:
+            vrank = input("Welchen Rank hast du in Valorant?: ")
+            vrank.upper[0]
+
+        if vrank =="Iron":
+            print("Hör auf, auf die Füße zu schauen!")
+        elif vrank =="Bronze":
+            print("Aimlabs = Free")
+        elif vrank =="Silver":
+            print("Coachings + YT is free = KOMM IN DIE GRUPPE!")
+        elif vrank =="Gold":
+            print("Hör auf zu fillen!")
+        elif vrank =="Platin":
+            print("Dein Ego ist größer als meine Zukunft!")
+        elif vrank =="Diamond":
+            print("Vllt mal Strats üben = Freelo")
+        elif vrank =="Ascendent":
+            print("Hardstuck 4 Life UwU")
+        elif vrank =="Immortal":
+            print("No Brain but aim/Dont cheat on your E-Kittens")
+        elif vrank =="Radiant":
+            print("Touch Grass")
+        else:
+            print("Uranked? ganz schön lame")
+
+#_______________________________________________________________________________________________________________________
+
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 
+#_______________________________________________________________________________________________________________________
 dreisatz()
 anti_dreisatz()
 taschenrechner()
 sqrt()
 hochrechnen()
 prozentrechnen()
+pythago()
+valo()
+#_______________________________________________________________________________________________________________________
 
 name = string_input("Wie ist dein name?: ")
 
@@ -417,43 +493,29 @@ for i in range (1,21):
 klassenliste = {}
 klvalue = ""
 
-yn = input("Willst du jemanden zu Klassenliste hinzufügen oder sie abrufen?")
-if yn =="hinzufügen":
-    klvalue = input("Bitte:Name, Klasse: ")
-    klassenliste.update(klvalue)
 
-elif yn =="abrufen":
-    if x in klassenliste:
-        print(x)
+while True:
+    x = input_yes_no("Willst du die Klassenliste bearbeiten?(Y/N): ")
+    if not x:
+        break
+
+    yn = input("Willst du jemanden zu Klassenliste hinzufügen oder sie abrufen?")
+    if yn =="hinzufügen":
+        klvalue = input("Bitte:Name, Klasse: ")
+        klassenliste.update(klvalue)
+
+    elif yn =="abrufen":
+        if x in klassenliste:
+            print(x)
+    else:
+        print("Keine eingabe erkannt")
+        pass
 #_______________________________________________________________________________________________________________________
-#valo zeugs
 
-vrank = None
 
-while not vrank:
-    vrank = input("Welchen Rank hast du in Valorant?: ")
-    vrank.upper[0]
-
-if vrank =="Iron":
-    print("Hör auf, auf die Füße zu schauen!")
-elif vrank =="Bronze":
-    print("Aimlabs = Free")
-elif vrank =="Silver":
-    print("Coachings + YT is free = KOMM IN DIE GRUPPE!")
-elif vrank =="Gold":
-    print("Hör auf zu fillen!")
-elif vrank =="Platin":
-    print("Dein Ego ist größer als meine Zukunft!")
-elif vrank =="Diamond":
-    print("Vllt mal Strats üben = Freelo")
-elif vrank =="Ascendent":
-    print("Hardstuck 4 Life UwU")
-elif vrank =="Immortal":
-    print("No Brain but aim/Dont cheat on your E-Kittens")
-elif vrank =="Radiant":
-    print("Touch Grass")
-else:
-    print("Uranked? ganz schön lame")
 
 #_______________________________________________________________________________________________________________________
+
+
+
 
