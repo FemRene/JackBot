@@ -4,12 +4,14 @@ import time
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
 #functions = I WILL NOT REPEAT MY CODE!
+
 def hello(name):
     print("Hallo "+name)
     print("https://pointerpointer.com/")
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
 #float while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
+
 def float_input(text):
     v = None
     while not v:
@@ -17,6 +19,7 @@ def float_input(text):
     return v
 #_______________________________________________________________________________________________________________________
 #string while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
+
 def string_input(name):
     x = ""
     while len(x) ==0:
@@ -24,6 +27,7 @@ def string_input(name):
     return x
 #_______________________________________________________________________________________________________________________
 #int while schleife (Der code wird erst fortgesetzt wenn eine Eingabe erfolgt ist)
+
 def int_input(text):
     y = None
     while not y:
@@ -31,6 +35,7 @@ def int_input(text):
     return y
 #_______________________________________________________________________________________________________________________
 #Input schleife mit boolean wenn der Input(Y) ist dann gibt er TRUE zurück andernfalls False
+
 def input_yes_no(text):
     y.upper[0] = input(text)
     if y=="Y":
@@ -39,6 +44,7 @@ def input_yes_no(text):
         return False
 #_______________________________________________________________________________________________________________________
 #dreisatz
+
 def dreisatz():
 
     while True:
@@ -179,6 +185,7 @@ def pythago():
     
 #_______________________________________________________________________________________________________________________
 #Kelvin in Celsius
+
 def kelvin_celsius():
     while True:
         y = input_yes_no("Kelvin/Celsius Umrechner benutzen?(Y/N): ")
@@ -197,6 +204,10 @@ def kelvin_celsius():
         gradh = float_input("Wie viel Grad?: ")
         kelvinh = gradh + 273.25
         print(str(gradh)+"°C sind: "+str(kelvinh)+"Kelvin")
+        
+#_______________________________________________________________________________________________________________________
+
+
 
 #_______________________________________________________________________________________________________________________
 #valo zeug
