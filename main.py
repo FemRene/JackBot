@@ -107,7 +107,23 @@ def taschenrechner():
             continue
 #_______________________________________________________________________________________________________________________
 
+l1 = {}
+l2 = {}
+ls = l1 + l2
 
+x_liste_updaten = input("Liste updaten oder abrufen?")
+x_liste_updaten = x_liste_updaten.lower
+
+                        
+if x_liste_updaten =="updaten":
+    ls.update = string_input("")
+
+
+elif x_liste_updaten=="abrufen":
+    for x in ls:
+        print(x)
+
+                        
 
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
