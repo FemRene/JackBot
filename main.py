@@ -150,6 +150,33 @@ def incm():
         else:
             return False
     
+#_______________________________________________________________________________________________________________________
+#celsius in Fahrenheit
+
+def fc():
+
+    while True:
+        x = input_yes_no("Willst du den Fahrenheit/Celsius umrechner benutzen(Y/N): ")
+        if not x:
+            break
+    
+    einheit = string_input("Welche Einheit hat das Maß?(Fahrenheit/Celsius)")
+    einheit = einheit.upper
+
+    while einheit is True:
+        if einheit =="FAHRENHEIT":
+            fa = float_input("Wie viel Grad Fahrenheit?: ")
+            gradcelsius = fa/1,8-32
+            print(str(fa)+"Grad Fahrenheit sind: "+str(gradcelsius)+"inch")
+            return True
+        elif einheit =="CELSIUS":
+            gradcelsius1 = float_input("Wie viel Grad Celsius?: ")
+            fa1 = gradcelsius1*1,8+32
+            print(str(gradcelsius1)+"°C sind: "+str(fa1)+"°F")
+            return True
+        else:
+            return False
+
 
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
