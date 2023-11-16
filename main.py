@@ -37,8 +37,8 @@ def int_input(text):
 #Input schleife mit boolean wenn der Input(Y) ist dann gibt er TRUE zurück andernfalls False
 
 def input_yes_no(text):
-    y.upper[0] = input(text)
-    if y=="Y":
+    y = input(text)
+    if y.upper=="Y":
         return True
     else:
         return False
@@ -107,21 +107,21 @@ def taschenrechner():
             continue
 #_______________________________________________________________________________________________________________________
 #2d listen
-l1 = {}
-l2 = {}
-ls = l1 + l2
+#l1 = {}
+#l2 = {}
 
-x_liste_updaten = input("Liste updaten oder abrufen?")
-x_liste_updaten = x_liste_updaten.lower
+
+#x_liste_updaten = input("Liste updaten oder abrufen?")
+#x_liste_updaten = x_liste_updaten.lower
 
                         
-if x_liste_updaten =="updaten":
-    ls.update = string_input("")
+#if x_liste_updaten =="updaten":
+#    ls.update = string_input("")
 
 
-elif x_liste_updaten=="abrufen":
-    for x in ls:
-        print(x)
+#elif x_liste_updaten=="abrufen":
+#for x in ls:
+#        print(x)
 
                         
 
@@ -278,7 +278,8 @@ def kelvin_celsius():
 
 #_______________________________________________________________________________________________________________________
 
-
+def identifer(first,middle,last):
+    print("Hallo "+first+" "+middle+" "+last)
 
 #_______________________________________________________________________________________________________________________
 #valo zeug
@@ -323,14 +324,14 @@ def valo():
 #while loop und While not loops mehr info auf ZEILE 105
 
 #_______________________________________________________________________________________________________________________
-dreisatz()
-anti_dreisatz()
-taschenrechner()
-sqrt()
-hochrechnen()
-prozentrechnen()
-pythago()
-valo()
+#dreisatz()
+#anti_dreisatz()
+#taschenrechner()
+#sqrt()
+#hochrechnen()
+#prozentrechnen()
+#pythago()
+#valo()
 #_______________________________________________________________________________________________________________________
 
 name = string_input("Wie ist dein name?: ")
@@ -380,7 +381,13 @@ if(name[0].islower()):
     name = name.capitalize()
     print("Hier dein name mit großem anfangsbuchstaben: " + str(name))
 
+#_______________________________________________________________________________________________________________________
+#keyword argument damit können identifer für den caller bereit gestellt werden wenn mehr information zu einer Funktion geschickt werden müssen
 
+identifer(first=string_input("Wie ist dein erster vorname?: "),
+          middle=string_input("Wie ist dein zweit Name?: "),
+          last=string_input("Wie ist dein nachname?: "))
+#_______________________________________________________________________________________________________________________
 
 first_name = name[:4].upper()
 last_name = name[5:].upper()
