@@ -106,7 +106,7 @@ def taschenrechner():
         else:
             continue
 #_______________________________________________________________________________________________________________________
-
+#2d listen
 l1 = {}
 l2 = {}
 ls = l1 + l2
@@ -124,6 +124,32 @@ elif x_liste_updaten=="abrufen":
         print(x)
 
                         
+
+#_______________________________________________________________________________________________________________________
+#cm in Inch
+
+def incm():
+
+    while True:
+        x = input_yes_no("Willst du den CM/INCH umrechner benutzen?(Y/N): ")
+        if not x:
+            break
+    einheit = string_input("Welche Einheit hat das Maß?(cm/inch): ")
+
+    while einheit is True:
+        if einheit =="cm":
+            cm = int_input("Größe?: ")
+            inch = cm*2,54
+            print(str(cm)+"cm sind: "+str(inch)+"inch")
+            return True
+        elif einheit =="inch":
+            inch1 = int_input("Größe?: ")
+            cm1 = inch1/2,54
+            print(str(inch1)+"inch sind: "+str(cm1)+"inch")
+            return True
+        else:
+            return False
+    
 
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
