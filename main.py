@@ -93,29 +93,21 @@ def taschenrechner():
 
         if operandie == '+':
             summe = zahl1 + zahl2
-            print(summe)
+            print(Zahl1+"+"+Zahl2+"="+summe)
         elif operandie == '-':
             summe = zahl1 - zahl2
-            print(summe)
+            print(Zahl1+"-"+Zahl2+"="+summe)
         elif operandie == '*':
             summe = zahl1 * zahl2
-            print(summe)
+            print(Zahl1+"*"+Zahl2+"="+summe)
         elif operandie == '/':
             summe = zahl1 / zahl2
-            print(summe)
+            print(Zahl1+"/"+Zahl2+"="+summe)
         else:
             continue
 #_______________________________________________________________________________________________________________________
 
-def ntaschenrechner():
-    while True:
-        y = input_yes_no("Taschenrechner nutzen?(Y/N): ")
-        if not y:
-            break
-    operandie = input("Wie willst du rechnen?(+ - / *): ")
 
-    if operandie =="+":
-        
 
 #_______________________________________________________________________________________________________________________
 #Prozent rechnen
@@ -140,7 +132,6 @@ def prozentrechnen():
         grundwert = float(input("Was ist der Grundwert(Hohe Zahl)?: "))
 
     prozentsatz = prozentwert * 100 / grundwert
-
     print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
 
 #_______________________________________________________________________________________________________________________
@@ -436,7 +427,7 @@ else:
     print("Jack ist abwesend!")
 
 #_______________________________________________________________________________________________________________________
-#dictionary = veränderbare variablen paare mit einem einzigartigen key, sehr schnell, benutzen hashing
+#dictionary = veränderbare variablen paare mit einem einzigartigen key, sehr schnell, benutzt hashing
 #KÖNNEN GEÄNDERT BZW GEUPDATED WERDEN WÄREND DAS PROGRAMM LÄUFT!
 
 mitschueler = {'Jonas':'IT-Klasse',
@@ -477,6 +468,9 @@ students = ["Jonas","Cora","Johanna","Maxim"]
 noobs = [valoranks, students]
 
 print(valoranks[0][1])
+
+for x,y in noobs:
+    print(x+"="+y)
 
 #List commands
 
@@ -527,7 +521,7 @@ while True:
         klassenliste.update(klvalue)
 
     elif yn =="abrufen":
-        if x in klassenliste:
+        for x in klassenliste:
             print(x)
     else:
         print("Keine eingabe erkannt")
