@@ -409,6 +409,11 @@ print(int(height))
 print(int(len(name*4)))
 #_______________________________________________________________________________________________________________________
 
+#nested funktions
+print(round(abs(input("Gib eine negativ nummer ein: "))))
+
+#_______________________________________________________________________________________________________________________
+
 #Slicing indexing[] slice() [start:stop:step]
 
 first_name = my_name[0:4]
