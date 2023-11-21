@@ -283,14 +283,20 @@ def identifer(first,middle,last):
 
 #_______________________________________________________________________________________________________________________
 #args ums mehr als nur einer value ohne eine reinfolge zu senden
+#tupels können nur geändert werdenn sie zu einer list formatiert werden
 
 def add(*args):
     sum = 0
     for i in args:
-        sum += 1
+        sum += i
     return sum
 
 print(add(5,6,1,66,12,52))
+#_______________________________________________________________________________________________________________________
+#kwargs
+
+
+
 #_______________________________________________________________________________________________________________________
 #valo zeug
 def valo():
@@ -385,6 +391,9 @@ print(Jack)
 print(Jonas)
 print(Cora)
 print(Johanna)
+
+
+
 #_______________________________________________________________________________________________________________________
 #index operator [] = nnützlich um aus sequenzen einzelne part raus zu picken
 if(name[0].islower()):
