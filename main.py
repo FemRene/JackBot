@@ -293,9 +293,14 @@ def add(*args):
 
 print(add(5,6,1,66,12,52))
 #_______________________________________________________________________________________________________________________
-#kwargs
+#kwargs macht alle agrumente in eine dictionary so das eine funktion mehr Keyword arguments akzeptiert
+#WICHTIG FÜR ABSCHLUSSARBEIT
 
+def inputnachweis(**nachweis):
 
+    print("Könnte wie folgt aussehen: ",end="\t \t \t")
+    for key,value in nachweis.items():
+        print(value,end="\t \t \t")
 
 #_______________________________________________________________________________________________________________________
 #valo zeug
@@ -392,6 +397,18 @@ print(Jonas)
 print(Cora)
 print(Johanna)
 
+#_______________________________________________________________________________________________________________________
+#nachweis test
+
+#inputnachweis(eins=input(),
+#              zwei=input(),
+#drei=input(),
+#              vier=input(),
+#              sechs=input(),
+#              sieben=input(),
+#              acht=input()
+#)
+
 
 
 #_______________________________________________________________________________________________________________________
@@ -403,7 +420,7 @@ if(name[0].islower()):
 #_______________________________________________________________________________________________________________________
 #keyword argument damit können identifer für den caller bereit gestellt werden wenn mehr information zu einer Funktion geschickt werden müssen
 
-identifer(first=string_input("Wie ist dein erster vorname?: "),
+identifer(first=string_input("\nWie ist dein erster vorname?: "),
           middle=string_input("Wie ist dein zweit Name?: "),
           last=string_input("Wie ist dein nachname?: "))
 #_______________________________________________________________________________________________________________________
