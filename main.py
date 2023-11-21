@@ -1,5 +1,6 @@
 import math
 import time
+
 #_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
@@ -303,6 +304,36 @@ def inputnachweis(**nachweis):
         print(value,end="\t \t \t")
 
 #_______________________________________________________________________________________________________________________
+#binär rechner
+
+
+def binre():
+    while True:
+        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+
+        if not x:
+            break
+    print("Deine Nummer in Binär: {bina:b}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+#_______________________________________________________________________________________________________________________
+#octal rechner
+def octare():
+    while True:
+        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+
+        if not x:
+            break
+    print("Deine Nummer in Binär: {bina:o}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+#_______________________________________________________________________________________________________________________
+#hexadezimalrechner
+def hexare():
+    while True:
+        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+
+        if not x:
+            break
+    print("Deine Nummer in Binär: {bina:X}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+#_______________________________________________________________________________________________________________________
+
 #valo zeug
 def valo():
 
@@ -353,7 +384,9 @@ def valo():
 #prozentrechnen()
 #pythago()
 #valo()
+#binre()
 #_______________________________________________________________________________________________________________________
+
 
 name = string_input("Wie ist dein name?: ")
 
@@ -368,7 +401,7 @@ my_name = "Jack Saering"
 hello(name)
                                                                                                                         #int
 #age += 1
-pi = 3.14
+pi = 3.14159
 x = 4
 y = 3
 z = 2
@@ -396,6 +429,30 @@ print(Jack)
 print(Jonas)
 print(Cora)
 print(Johanna)
+#_______________________________________________________________________________________________________________________
+#str.format()= optional gibt aber mit kontrolle über den user output "{}"Placeholder "Formatfield"
+
+#tier = "Hund"
+#item = "Mond"
+
+#print("Der {} spring über den {}".format(tier, item))
+#print("Der {0} spring über den {1}".format(tier, item)) #positional argument
+print("Der {animals:^5} spring über das {item:^5}".format(animals=string_input("Tier?: "),item=string_input("Gegenstand?: ")))#keywaord argument
+
+#print("Ich hab mir deinen namen geklaut, guck hier: {:5} Bekommst du auch nie wieder".format(name))
+#print("Ich hab mir deinen namen geklaut, guck hier: {:>5} Bekommst du auch nie wieder".format(name))
+#print("Ich hab mir deinen namen geklaut, guck hier: {:^5} Bekommst du auch nie wieder".format(name))
+
+print("Die nummer Pi ist: {:.2f}".format(pi))
+
+nrlo = 1000000
+
+print("Die nummer ist {,}".format(nrlo))
+print("Die nummer ist {.E}".format(nrlo))
+
+
+#textformat = "Der {} spring über den {}"
+#print(text.format(tier,item))
 
 #_______________________________________________________________________________________________________________________
 #nachweis test
