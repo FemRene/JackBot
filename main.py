@@ -1,5 +1,6 @@
 import math
 import time
+import random
 
 #_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
@@ -307,7 +308,7 @@ def inputnachweis(**nachweis):
 #binär rechner
 
 
-def binre():
+def binrel():
     while True:
         x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
 
@@ -333,6 +334,41 @@ def hexare():
             break
     print("Deine Nummer in Binär: {bina:X}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
 #_______________________________________________________________________________________________________________________
+#Rock,Paper,Sciccors
+
+def rpcgame():
+    while True:
+        x = input_yes_no("Willst du eine Runde Schere, Stein, Papier spielen?(Y/N): ")
+        if not x:
+            break
+
+    rpcgame_List = ['Schere', 'Stein', 'Papier']
+    computeri = random.choice(rpcgame_List)
+    use_input = string_input("Wähle: Schere, Stein oder Papier!: ")
+
+    if use_input =="Schere" and computeri =="Stein":
+        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Schere" and computeri =="Papier":
+        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Schere" and computeri =="Schere":
+        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
+
+    elif use_input =="Stein" and computeri =="Stein":
+        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Stein" and computeri =="Papier":
+        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Stein" and computeri =="Schere":
+        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
+
+    elif use_input =="Papier" and computeri =="Stein":
+        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Papier" and computeri =="Papier":
+        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
+    elif use_input =="Papier" and computeri =="Schere":
+        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
+
+#_______________________________________________________________________________________________________________________
+
 
 #valo zeug
 def valo():
@@ -385,6 +421,7 @@ def valo():
 #pythago()
 #valo()
 #binre()
+rpcgame()
 #_______________________________________________________________________________________________________________________
 
 
@@ -429,6 +466,21 @@ print(Jack)
 print(Jonas)
 print(Cora)
 print(Johanna)
+#_______________________________________________________________________________________________________________________
+#randomizer
+xrand = random.randint(1,6)
+yrand = random.random()
+
+card_list = [1,2,3,4,5,6,7,8,9,"B","D","K","A"]
+rock_paper_list = ['Stein','Papier','Schere']
+
+zrand = random.choice(rock_paper_list)
+crand = random.shuffle(card_list)
+
+print(zrand)
+print(crand)
+
+
 #_______________________________________________________________________________________________________________________
 #str.format()= optional gibt aber mit kontrolle über den user output "{}"Placeholder "Formatfield"
 
