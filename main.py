@@ -151,7 +151,7 @@ def incm():
             return True
         else:
             return False
-    
+
 #_______________________________________________________________________________________________________________________
 #celsius in Fahrenheit
 
@@ -335,6 +335,7 @@ def hexare():
     print("Deine Nummer in Binär: {bina:X}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
 #_______________________________________________________________________________________________________________________
 #Rock,Paper,Sciccors
+#für win_cond wird dic benutzt, in diesem fall Gleich Computeri die {"VALUE:key"} abd und gibt {"value:KEY"} zurück
 
 def rpcgame():
     while True:
@@ -345,27 +346,16 @@ def rpcgame():
     rpcgame_List = ['Schere', 'Stein', 'Papier']
     computeri = random.choice(rpcgame_List)
     use_input = string_input("Wähle: Schere, Stein oder Papier!: ")
+    rpc_win_cond = {"Stein":"Schere",
+                    "Schere":"Papier",
+                    "Papier":"Stein"}
 
-    if use_input =="Schere" and computeri =="Stein":
-        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Schere" and computeri =="Papier":
-        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Schere" and computeri =="Schere":
-        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
-
-    elif use_input =="Stein" and computeri =="Stein":
-        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Stein" and computeri =="Papier":
-        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Stein" and computeri =="Schere":
-        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
-
-    elif use_input =="Papier" and computeri =="Stein":
-        print("Du Gewinnst, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Papier" and computeri =="Papier":
-        print("Unentschieden, der Computer hatte {:^5}".format(computeri))
-    elif use_input =="Papier" and computeri =="Schere":
-        print("Du Verlierst, der Computer hatte {:^5}".format(computeri))
+    if computeri == use_input:
+        print("Unentschieden viel Glück bein nächsten mal, der Computer hatte auch {:^5}".format(computeri))
+    elif rpc_win_cond[computeri] ==use_input:
+        print("Du Verlierst! Der Computer hatte {:^5}".format(computeri))
+    else:
+        print("Du Gewinnst! Der Computer hatte {:^5}".format(computeri))
 
 #_______________________________________________________________________________________________________________________
 
