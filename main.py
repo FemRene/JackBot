@@ -40,7 +40,7 @@ def int_input(text):
 
 def input_yes_no(text):
     y = input(text)
-    if y.upper=="Y":
+    if y.upper()=="Y":
         return True
     else:
         return False
@@ -51,7 +51,7 @@ def dreisatz():
 
     while True:
         y = input_yes_no("Willst du ein dreisatz ausrechen?(Y/N): ")
-        if not y:
+        if y:
             break
         
         drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
@@ -68,7 +68,7 @@ def anti_dreisatz():
 
     while True:
         y= input_yes_no("Willst du denn antiporportionalen Dreisatz ausrechnen?(Y/N): ")
-        if not y:
+        if y:
             break
 
         dreisatz_pvariable0 = float_input("Wie lautet die erste Zahl in deinem Satz?: ")
@@ -85,7 +85,7 @@ def taschenrechner():
 
     while True:
         y = input_yes_no("Willst du den Taschenrechner benutzen(Y/N): ")
-        if not y:
+        if y:
             break
 
         operandie = input("Wie willst du rechnen?(+ - / *): ")
@@ -134,7 +134,7 @@ def incm():
 
     while True:
         x = input_yes_no("Willst du den CM/INCH umrechner benutzen?(Y/N): ")
-        if not x:
+        if x:
             break
     einheit = string_input("Welche Einheit hat das Maß?(cm/inch): ")
 
@@ -159,7 +159,7 @@ def fc():
 
     while True:
         x = input_yes_no("Willst du den Fahrenheit/Celsius umrechner benutzen(Y/N): ")
-        if not x:
+        if x:
             break
     
     einheit = string_input("Welche Einheit hat das Maß?(Fahrenheit/Celsius)")
@@ -187,7 +187,7 @@ def prozentrechnen():
 
     while True:
         x = input_yes_no("Willst du Prozentrechnen?(Y/N): ")
-        if not x:
+        if x:
             break
 
     prozentwert = None
@@ -212,7 +212,7 @@ def hochrechnen():
 
     while True:
         x = input_yes_no("Willst du Hochrechnen?(Y/N): ")
-        if not x:
+        if x:
             break
     
     pwrrechnen = None
@@ -233,7 +233,7 @@ def hochrechnen():
 def sqrt():
     while True:
         y = input_yes_no("Willst du die Wurzel einer Zahl?(Y/N): ")
-        if not y:
+        if y:
             break
 
     sqrt = None
@@ -247,7 +247,7 @@ def sqrt():
 def pythago():
     while True:
         y = input_yes_no("Willst du den Satz des Pythagoras ausrechnen?(Y/N): ")
-        if not y:
+        if y:
             break
 
     seite_a = float_input("Wie lang ist seite A?: ")
@@ -262,7 +262,7 @@ def pythago():
 def kelvin_celsius():
     while True:
         y = input_yes_no("Kelvin/Celsius Umrechner benutzen?(Y/N): ")
-        if not y:
+        if y:
             break
     x[0:0] = input("Welche einheit soll umgerechnet werden?(Grad/Kelvin): ")
     
@@ -293,7 +293,7 @@ def add(*args):
         sum += i
     return sum
 
-print(add(5,6,1,66,12,52))
+#print(add(5,6,1,66,12,52))
 #_______________________________________________________________________________________________________________________
 #kwargs macht alle agrumente in eine dictionary so das eine funktion mehr Keyword arguments akzeptiert
 #WICHTIG FÜR ABSCHLUSSARBEIT
@@ -307,55 +307,57 @@ def inputnachweis(**nachweis):
 #_______________________________________________________________________________________________________________________
 #binär rechner
 
-
 def binrel():
-    while True:
-        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
 
-        if not x:
-            break
+    x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+    if x:
+        return
     print("Deine Nummer in Binär: {bina:b}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+    binrel()
 #_______________________________________________________________________________________________________________________
 #octal rechner
 def octare():
-    while True:
-        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
 
-        if not x:
-            break
+    x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+    if x:
+        return
+
     print("Deine Nummer in Binär: {bina:o}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+    octare()
 #_______________________________________________________________________________________________________________________
 #hexadezimalrechner
 def hexare():
-    while True:
-        x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
 
-        if not x:
-            break
+    x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
+    if not x:
+        return
+
     print("Deine Nummer in Binär: {bina:X}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
+    hexare()
 #_______________________________________________________________________________________________________________________
 #Rock,Paper,Sciccors
 #für win_cond wird dic benutzt, in diesem fall Gleich Computeri die {"VALUE:key"} abd und gibt {"value:KEY"} zurück
-
+#rpcgame() am ende "Rekursive Funktion" sollte man trotzdem vermeiden
 def rpcgame():
     while True:
         x = input_yes_no("Willst du eine Runde Schere, Stein, Papier spielen?(Y/N): ")
         if not x:
-            break
+            return
 
-    rpcgame_List = ['Schere', 'Stein', 'Papier']
-    computeri = random.choice(rpcgame_List)
-    use_input = string_input("Wähle: Schere, Stein oder Papier!: ")
-    rpc_win_cond = {"Stein":"Schere",
-                    "Schere":"Papier",
-                    "Papier":"Stein"}
+        rpcgame_List = ['Schere', 'Stein', 'Papier']
+        computeri = random.choice(rpcgame_List)
+        use_input = string_input("Wähle: Schere, Stein oder Papier!: ")
+        rpc_win_cond = {"Stein":"Schere",
+                        "Schere":"Papier",
+                        "Papier":"Stein"}
 
-    if computeri == use_input:
-        print("Unentschieden viel Glück bein nächsten mal, der Computer hatte auch {:^5}".format(computeri))
-    elif rpc_win_cond[computeri] ==use_input:
-        print("Du Verlierst! Der Computer hatte {:^5}".format(computeri))
-    else:
-        print("Du Gewinnst! Der Computer hatte {:^5}".format(computeri))
+        if computeri == use_input:
+            print("Unentschieden viel Glück bein nächsten mal, der Computer hatte auch {:^5}".format(computeri))
+        elif rpc_win_cond[computeri] ==use_input:
+            print("Du Verlierst! Der Computer hatte {:^5}".format(computeri))
+        else:
+            print("Du Gewinnst! Der Computer hatte {:^5}".format(computeri))
+
 
 #_______________________________________________________________________________________________________________________
 
@@ -365,7 +367,7 @@ def valo():
 
     while True:
         x = input_yes_no()
-        if not x:
+        if x:
             break
 
         vrank = None
