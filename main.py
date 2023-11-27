@@ -352,7 +352,7 @@ def rpcgame():
                         "Papier":"Stein"}
 
         if computeri == use_input:
-            print("Unentschieden viel Glück bein nächsten mal, der Computer hatte auch {:^5}".format(computeri))
+            print("Unentschieden, viel Glück beim nächsten Mal, der Computer hatte auch {:^5}".format(computeri))
         elif rpc_win_cond[computeri] ==use_input:
             print("Du Verlierst! Der Computer hatte {:^5}".format(computeri))
         else:
