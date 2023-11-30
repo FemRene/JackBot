@@ -85,7 +85,7 @@ def taschenrechner():
 
     while True:
         y = input_yes_no("Willst du den Taschenrechner benutzen(Y/N): ")
-        if y:
+        if not y:
             break
 
         operandie = input("Wie willst du rechnen?(+ - / *): ")
@@ -134,7 +134,7 @@ def incm():
 
     while True:
         x = input_yes_no("Willst du den CM/INCH umrechner benutzen?(Y/N): ")
-        if x:
+        if not x:
             break
     einheit = string_input("Welche Einheit hat das Maß?(cm/inch): ")
 
@@ -159,7 +159,7 @@ def fc():
 
     while True:
         x = input_yes_no("Willst du den Fahrenheit/Celsius umrechner benutzen(Y/N): ")
-        if x:
+        if not x:
             break
     
     einheit = string_input("Welche Einheit hat das Maß?(Fahrenheit/Celsius)")
@@ -187,7 +187,7 @@ def prozentrechnen():
 
     while True:
         x = input_yes_no("Willst du Prozentrechnen?(Y/N): ")
-        if x:
+        if not x:
             break
 
     prozentwert = None
@@ -212,7 +212,7 @@ def hochrechnen():
 
     while True:
         x = input_yes_no("Willst du Hochrechnen?(Y/N): ")
-        if x:
+        if not x:
             break
     
     pwrrechnen = None
@@ -233,7 +233,7 @@ def hochrechnen():
 def sqrt():
     while True:
         y = input_yes_no("Willst du die Wurzel einer Zahl?(Y/N): ")
-        if y:
+        if not y:
             break
 
     sqrt = None
@@ -247,7 +247,7 @@ def sqrt():
 def pythago():
     while True:
         y = input_yes_no("Willst du den Satz des Pythagoras ausrechnen?(Y/N): ")
-        if y:
+        if not y:
             break
 
     seite_a = float_input("Wie lang ist seite A?: ")
@@ -262,7 +262,7 @@ def pythago():
 def kelvin_celsius():
     while True:
         y = input_yes_no("Kelvin/Celsius Umrechner benutzen?(Y/N): ")
-        if y:
+        if not y:
             break
     x[0:0] = input("Welche einheit soll umgerechnet werden?(Grad/Kelvin): ")
     
@@ -310,7 +310,7 @@ def inputnachweis(**nachweis):
 def binrel():
 
     x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
-    if x:
+    if not x:
         return
     print("Deine Nummer in Binär: {bina:b}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
     binrel()
@@ -319,7 +319,7 @@ def binrel():
 def octare():
 
     x = input_yes_no("Willst du den Binärrechner benutzen?(Y/N): ")
-    if x:
+    if not x:
         return
 
     print("Deine Nummer in Binär: {bina:o}".format(bina=int_input("Eine Zahl die du in Binär haben möchtest: ")))
@@ -360,7 +360,23 @@ def rpcgame():
 
 
 #_______________________________________________________________________________________________________________________
+def bdorechner():
+    while True:
+        x = input_yes_no("Willst du den BDO Rechner benutzen?(Y/N)")
+        if not x:
+            return
+    
+    bdo_grindspot = {"Starsend":15.500,
+                     "Blutwölfe":6.500,
+                     "Dornenwald":16.000,}
+    i_input = "Welcher Spot?: "
+    i_much = "Wie viel?: "
 
+    isumme = (bdo_grindspot[i_input] * i_much) / 60
+
+    printf("Du hast "+str(isumme)+"Silber pro Stunde verdient!")
+    
+#_______________________________________________________________________________________________________________________
 
 #valo zeug
 def valo():
