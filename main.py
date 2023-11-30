@@ -366,15 +366,15 @@ def bdorechner():
         if not x:
             return
     
-    bdo_grindspot = {"Starsend":15.500,
-                     "Blutwölfe":6.500,
-                     "Dornenwald":16.000,}
-    i_input = "Welcher Spot?: "
-    i_much = "Wie viel?: "
+        bdo_grindspot = {"Starsend":15.500,
+                        "Blutwölfe":6.500,
+                        "Dornenwald":16.000,}
+        i_input = input("Welcher?(Starsend/Blutwölfe/Dornenwald): ")
+        i_much = input("Wie viel?: ")
 
-    isumme = (bdo_grindspot[i_input] * i_much) / 60
+        isumme = bdo_grindspot[i_input] * i_much / 60
 
-    printf("Du hast "+str(isumme)+"Silber pro Stunde verdient!")
+        printf("Du hast "+str(isumme)+"Silber pro Stunde verdient!")
     
 #_______________________________________________________________________________________________________________________
 
@@ -429,7 +429,8 @@ def valo():
 #pythago()
 #valo()
 #binre()
-rpcgame()
+#rpcgame()
+bdorechner()
 #_______________________________________________________________________________________________________________________
 
 
