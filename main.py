@@ -366,15 +366,15 @@ def bdorechner():
         if not x:
             return
     
-        bdo_grindspot = {"Starsend":15.500,
-                        "Blutwölfe":6.500,
-                        "Dornenwald":16.000,}
+        bdo_grindspot = {"Starsend":15500,
+                        "Blutwölfe":6500,
+                        "Dornenwald":16000,}
         i_input = input("Welcher?(Starsend/Blutwölfe/Dornenwald): ")
-        i_much = input("Wie viel?: ")
+        i_much = int_input("Wie viel?: ")
 
         isumme = bdo_grindspot[i_input] * i_much / 60
 
-        printf("Du hast "+str(isumme)+"Silber pro Stunde verdient!")
+        print("Du hast {:.2f} Silber pro Stunde verdient!".format(isumme))
     
 #_______________________________________________________________________________________________________________________
 
