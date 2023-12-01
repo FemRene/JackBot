@@ -15,3 +15,4 @@ class Kuhlschrank:
 
     def aus(self):
         print(self.owner+" ist aus")
+
