@@ -1,7 +1,7 @@
 import math
 import time
 import random
-
+from kuhlschrank import kuhlschrank
 #_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
@@ -414,6 +414,20 @@ def valo():
             print("Uranked? ganz schön lame")
 
 #_______________________________________________________________________________________________________________________
+#Klassen werden benutzt um objekte besser beschreiben zu können
+#siehe Kuhlschrank.py
+#Klassen
+
+mein_kuhlschrank = kuhlschrank("Jack's Kühlschrank","Weiß","1,50","Energyklasse:F","800L")
+
+print(kuhlschrank.owner)
+print(kuhlschrank.farbe)
+print(kuhlschrank.hohe)
+print(kuhlschrank.e_klasse)
+print(kuhlschrank.volumen)
+
+kuhlschrank.an()
+kuhlschrank.aus()
 
 #_______________________________________________________________________________________________________________________
 #_______________________________________________________________________________________________________________________
