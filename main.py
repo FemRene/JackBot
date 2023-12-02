@@ -81,32 +81,41 @@ def anti_dreisatz():
     
 #_______________________________________________________________________________________________________________________
 #taschenrechner
+#try/except verdammt wichtig für user input, damit der code auch weiter läuft ohne das er durch ein Fehler des Users geblocked wird
 def taschenrechner():
+    try:
+        while True:
+            y = input_yes_no("Willst du den Taschenrechner benutzen(Y/N): ")
+            if not y:
+                break
 
-    while True:
-        y = input_yes_no("Willst du den Taschenrechner benutzen(Y/N): ")
-        if not y:
-            break
+            operandie = input("Wie willst du rechnen?(+ - / *): ")
+            zahl1 = int(input("Welche zahl?: "))
+            zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
+            summe = None
 
-        operandie = input("Wie willst du rechnen?(+ - / *): ")
-        zahl1 = int(input("Welche zahl?: "))
-        zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
-        summe = None
+            if operandie == '+':
+                summe = zahl1 + zahl2
+                print(Zahl1+"+"+Zahl2+"="+summe)
+            elif operandie == '-':
+                summe = zahl1 - zahl2
+                print(Zahl1+"-"+Zahl2+"="+summe)
+            elif operandie == '*':
+                summe = zahl1 * zahl2
+                print(Zahl1+"*"+Zahl2+"="+summe)
+            elif operandie == '/':
+                summe = zahl1 / zahl2
+                print(Zahl1 + "/" + Zahl2 + "=" + summe)
 
-        if operandie == '+':
-            summe = zahl1 + zahl2
-            print(Zahl1+"+"+Zahl2+"="+summe)
-        elif operandie == '-':
-            summe = zahl1 - zahl2
-            print(Zahl1+"-"+Zahl2+"="+summe)
-        elif operandie == '*':
-            summe = zahl1 * zahl2
-            print(Zahl1+"*"+Zahl2+"="+summe)
-        elif operandie == '/':
-            summe = zahl1 / zahl2
-            print(Zahl1+"/"+Zahl2+"="+summe)
-        else:
-            continue
+    except ZeroDivisionError as e:
+        print(e)
+        print("Du kannst nicht durch 0 Dividieren.")
+    except ValueError as e:
+        print(e)
+        print("Nur Zahlen!")
+    except Exception as e:
+        print(e)
+        print("Es scheint so als hättest etwas versucht, was in der Mathematik nicht funktioniert!")
 #_______________________________________________________________________________________________________________________
 #2d listen
 #l1 = {}
@@ -430,6 +439,8 @@ kuhlschrank.an()
 kuhlschrank.aus()
 
 #_______________________________________________________________________________________________________________________
+
+
 #_______________________________________________________________________________________________________________________
 #while loop und While not loops mehr info auf ZEILE 105
 
