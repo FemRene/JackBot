@@ -1,7 +1,8 @@
 import math
 import time
 import random
-from kuhlschrank import kuhlschrank
+from kuhlschrank import Kuhlschrank
+import os
 #_______________________________________________________________________________________________________________________
 #https://www.youtube.com/watch?v=XKHEtdqhLK8  Video
 #_______________________________________________________________________________________________________________________
@@ -427,18 +428,48 @@ def valo():
 #siehe Kuhlschrank.py
 #Klassen
 
-mein_kuhlschrank = kuhlschrank("Jack's Kühlschrank","Weiß","1,50","Energyklasse:F","800L")
+mein_kuhlschrank = Kuhlschrank("Jack's Kühlschrank","Weiß","1,50","Energyklasse:F","800L")
 
-print(kuhlschrank.owner)
-print(kuhlschrank.farbe)
-print(kuhlschrank.hohe)
-print(kuhlschrank.e_klasse)
-print(kuhlschrank.volumen)
+print(mein_kuhlschrank.owner)
+print(mein_kuhlschrank.farbe)
+print(mein_kuhlschrank.hohe)
+print(mein_kuhlschrank.e_klasse)
+print(mein_kuhlschrank.volumen)
 
-kuhlschrank.an()
-kuhlschrank.aus()
+#Kuhlschrank.an()
+#Kuhlschrank.aus()
 
 #_______________________________________________________________________________________________________________________
+#OS
+#file detection
+paht = "C:\\Users\\Jack\\Desktop\\SmurfValorant.txt"
+
+if os.path.exists(path="C:\\Users\\Jack\\Desktop\\SmurfValorant.txt"):
+    print("Existiert")
+    if os.path.isdir(paht):
+        print("Ist ein Ordern")
+    elif os.path.isfile(paht):
+        print("ist eine Datei")
+else:
+    print("Der Dateipfad existiert nicht!")
+#Datei Auslesen
+try:
+    with open(paht) as file:
+        print(file.read()+"\n")
+except FileNotFoundError:
+    print("Existiert nicht")
+
+#Datei beschreiben
+try:
+
+    with open('testOS.txt','w') as file:
+        file.write(string_input("Was möchtest du in die Datei schreiben?"))
+except FileNotFoundError:
+    print("Datei nicht gefunden")
+except Exception as e:
+    print(e)
+    print("Nicht bekannter Error")
+
 
 
 #_______________________________________________________________________________________________________________________
