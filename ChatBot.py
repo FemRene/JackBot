@@ -176,7 +176,6 @@ def main():
                     "Big Dick energy",
                     "Du bist ein richtiger Schnuggiputz uwu"],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
-        "rechnen": ma_rechner, #Ma_rechner wird hier gesetzt
         "wie findest du meine Aussehen?": ["Gefällt mir !",
                                             "Das ist echt cool !",
                                             "slayed mega !",
@@ -185,10 +184,10 @@ def main():
                                             "Ich glaube längre Haare würden dir besser stehen."],
         "uhrzeit":current_time,
         "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen",
-        "taschenrechner"
-
-
-
+        "taschenrechner":dreisatz,
+        "cm rechner":incm,
+        "celsius umrechnen":fc
+        "prozent":prozentrechnen
     }
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
