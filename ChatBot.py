@@ -1,8 +1,11 @@
 import random
 from datetime import datetime
+import pytz
 
+#Timezone Berlin
+zeitzone_berlin = pytz.timezone('Europe/Berlin')
 #Uhrzeit initialisieren
-now = datetime.now()
+now = datetime.now(zeitzone_berlin)
 #Derzeitige Uhrzeit initialisieren
 current_time = now.strftime("%H:%M:%S")
 
@@ -64,10 +67,16 @@ def ma_rechner():
         print(e)
         print("Es scheint so als hättest etwas versucht, was in der Mathematik nicht funktioniert!")
 
+# Funktion, um eine Stunde zur aktuellen Zeit hinzuzufügen
+#def addiere_eine_stunde(zeit):
+    #zeit_objekt = datetime.strptime(zeit, "%H:%M:%S")
+    #neue_zeit = zeit_objekt + timedelta(hours=1)
+    #return neue_zeit.strftime("%H:%M:%S")
 
 def main():
 
-
+    #Addiert eine extra stunde auf ausgebene Zeit
+    #zeitzone_berlin = addiere_eine_stunde(current_time)
 
     # zufällige Antworten generieren
     random_antwort = [
@@ -98,6 +107,8 @@ def main():
 
     # Benutzereingabe initialisieren
     userinput = input(str("Über was möchtest du mit mir reden?: "))
+    #Addiert eine extra stunde auf ausgebene Zeit
+    #zeitzone_berlin = addiere_eine_stunde(current_time)
 
     while userinput.lower() != "bye":
         userinput = input("Deine Frage/Antwort?: ")
@@ -118,7 +129,7 @@ def main():
                     reactions[einzel_woerter]()
                 #Uhrzeit von datetime wird übergeben
                 elif einzel_woerter == "uhrzeit":
-                    print("Wir haben es gerade: "+current_time)
+                    print("Wir haben es gerade: "+current_time+"")
                 else:
                     print(reactions[einzel_woerter])
                 antwort_gefunden = True
