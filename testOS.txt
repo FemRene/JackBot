@@ -1,0 +1,18 @@
+        antwort_gefunden = False
+        for einzel_woerter in user_woerter:
+            if einzel_woerter in reactions:
+                #Liste für "aussehen" in Dictionary "Reactions" wird aufgerufen
+                if einzel_woerter == "aussehen":
+                    print(random.choice(reactions[einzel_woerter]))
+                #Liste für "findest" in Dictionary "Reactions" wird aufgerufen
+                elif einzel_woerter == "findest":
+                    print(random.choice(reactions[einzel_woerter]))
+                #Ma_rechner wird hier initialisiert
+                elif einzel_woerter == "mathe":
+                    reactions[einzel_woerter]()
+                #Uhrzeit von datetime wird übergeben
+                elif einzel_woerter == "uhrzeit":
+                    print("Wir haben es gerade: "+current_time+"")
+                else:
+                    print(reactions[einzel_woerter])
+                antwort_gefunden = True

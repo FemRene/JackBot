@@ -66,18 +66,90 @@ def ma_rechner():
     except Exception as e:
         print(e)
         print("Es scheint so als hättest etwas versucht, was in der Mathematik nicht funktioniert!")
+#dreisatz
+def dreisatz():
 
-# Funktion, um eine Stunde zur aktuellen Zeit hinzuzufügen
-#def addiere_eine_stunde(zeit):
-    #zeit_objekt = datetime.strptime(zeit, "%H:%M:%S")
-    #neue_zeit = zeit_objekt + timedelta(hours=1)
-    #return neue_zeit.strftime("%H:%M:%S")
+    while True:
+        y = input_yes_no("Willst du ein dreisatz ausrechen?(Y/N): ")
+        if y:
+            break
+        
+        drei_satz_pvariable0 = float_input("Was ist die erste proportionale Zahl?: ")
+        drei_satz_pvariable1 = float_input("Was ist die zweite proportionale Zahl?: ")
+        drei_satz_avariable0 = float_input("Was ist die erste anti-proportionale Zahl?(ist meist die such zahl): ")
 
+        dsumme = drei_satz_pvariable1 * drei_satz_avariable0 / drei_satz_pvariable0
+        print("Die Antwort ist: "+str(dsumme))
+#cm in Inch
+def incm():
+
+    while True:
+        x = input_yes_no("Willst du den CM/INCH umrechner benutzen?(Y/N): ")
+        if not x:
+            break
+    einheit = string_input("Welche Einheit hat das Maß?(cm/inch): ")
+
+    while einheit is True:
+        if einheit =="cm":
+            cm = int_input("Größe?: ")
+            inch = cm*2,54
+            print(str(cm)+"cm sind: "+str(inch)+"inch")
+            return True
+        elif einheit =="inch":
+            inch1 = int_input("Größe?: ")
+            cm1 = inch1/2,54
+            print(str(inch1)+"inch sind: "+str(cm1)+"inch")
+            return True
+        else:
+            return False
+#FC umrechner
+def fc():
+
+    while True:
+        x = input_yes_no("Willst du den Fahrenheit/Celsius umrechner benutzen(Y/N): ")
+        if not x:
+            break
+    
+    einheit = string_input("Welche Einheit hat das Maß?(Fahrenheit/Celsius)")
+    einheit = einheit.upper
+
+    while einheit is True:
+        if einheit =="FAHRENHEIT":
+            fa = float_input("Wie viel Grad Fahrenheit?: ")
+            gradcelsius = fa/1,8-32
+            print(str(fa)+"Grad Fahrenheit sind: "+str(gradcelsius)+"inch")
+            return True
+        elif einheit =="CELSIUS":
+            gradcelsius1 = float_input("Wie viel Grad Celsius?: ")
+            fa1 = gradcelsius1*1,8+32
+            print(str(gradcelsius1)+"°C sind: "+str(fa1)+"°F")
+            return True
+        else:
+            return False
+#Prozent rechnen
+def prozentrechnen():
+
+    while True:
+        x = input_yes_no("Willst du Prozentrechnen?(Y/N): ")
+        if not x:
+            break
+
+    prozentwert = None
+    grundwert = None
+
+    while not prozentwert:
+        prozentwert = float(input("Was ist der Prozentwert(Kleine Zahl)?: "))
+
+
+
+
+    while not grundwert:
+        grundwert = float(input("Was ist der Grundwert(Hohe Zahl)?: "))
+
+    prozentsatz = prozentwert * 100 / grundwert
+    print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
+#Main funktion
 def main():
-
-    #Addiert eine extra stunde auf ausgebene Zeit
-    #zeitzone_berlin = addiere_eine_stunde(current_time)
-
     # zufällige Antworten generieren
     random_antwort = [
         "Oh, wirklich",
@@ -89,50 +161,56 @@ def main():
         "Ich glaub das wird mir gerade zu viel",
         "Das ist sehr kompliziert"
     ]
-
     # Reaktionen auf bestimmte Schlüsselwörter
     reactions = {
         "hallo": "Hallo?",
         "essen": "Ich bin eine Maschine, ich habe keine Geschmacksknospen :C",
-        "aussehen": ["Du bist wunderschön", "Dein Aussehen ist großartig","Du hast schöne Augen","Du slayst","Dein Style ist sehr cool","Du riechst nach Old Spice, mega nice *sniff*","Du wirkst sehr talentiert","Du hast nen coolen Vibe","Big Dick energy","Du bist ein richtiger Schnuggiputz uwu"],
+        "aussehen": ["Du bist wunderschön", 
+                    "Dein Aussehen ist großartig",
+                    "Du hast schöne Augen",
+                    "Du slayst",
+                    "Dein Style ist sehr cool",
+                    "Du riechst nach Old Spice, mega nice *sniff*",
+                    "Du wirkst sehr talentiert",
+                    "Du hast nen coolen Vibe",
+                    "Big Dick energy",
+                    "Du bist ein richtiger Schnuggiputz uwu"],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "rechnen": ma_rechner, #Ma_rechner wird hier gesetzt
-        "findest": ["Gefällt mir !","Das ist echt cool !","slayed mega !","Sehr gut !","finde ich gut","naja könnte besser sein"],
+        "wie findest du meine Aussehen?": ["Gefällt mir !",
+                                            "Das ist echt cool !",
+                                            "slayed mega !",
+                                            "Sehr gut !",
+                                            "finde ich gut",
+                                            "Ich glaube längre Haare würden dir besser stehen."],
         "uhrzeit":current_time,
+        "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen",
+        "taschenrechner"
+
+
 
     }
-
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
+    print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
     print("Wenn du mich beenden willst schreib einfach 'bye'")
 
     # Benutzereingabe initialisieren
     userinput = input(str("Über was möchtest du mit mir reden?: "))
-    #Addiert eine extra stunde auf ausgebene Zeit
-    #zeitzone_berlin = addiere_eine_stunde(current_time)
-
+    
     while userinput.lower() != "bye":
         userinput = input("Deine Frage/Antwort?: ")
 
         user_woerter = userinput.lower().split()
 
         antwort_gefunden = False
-        for einzel_woerter in user_woerter:
-            if einzel_woerter in reactions:
-                #Liste für "aussehen" in Dictionary "Reactions" wird aufgerufen
-                if einzel_woerter == "aussehen":
-                    print(random.choice(reactions[einzel_woerter]))
-                #Liste für "findest" in Dictionary "Reactions" wird aufgerufen
-                elif einzel_woerter == "findest":
-                    print(random.choice(reactions[einzel_woerter]))
-                #Ma_rechner wird hier initialisiert
-                elif einzel_woerter == "mathe":
-                    reactions[einzel_woerter]()
-                #Uhrzeit von datetime wird übergeben
-                elif einzel_woerter == "uhrzeit":
-                    print("Wir haben es gerade: "+current_time+"")
+        for key in reactions:
+            if key.lower() in userinput.lower():
+                if isinstance(reactions[key], list):
+                    print(random.choice(reactions[key]))
                 else:
-                    print(reactions[einzel_woerter])
+                    print(reactions[key])
                 antwort_gefunden = True
+                break
 
         if not antwort_gefunden:
             print(random.choice(random_antwort))
