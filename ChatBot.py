@@ -1,4 +1,10 @@
 import random
+from datetime import datetime
+
+#Uhrzeit initialisieren
+now = datetime.now()
+#Derzeitige Uhrzeit initialisieren
+current_time = now.strftime("%H:%M:%S")
 
 #Yes/No schleife für funktionen
 def input_yes_no(text):
@@ -58,7 +64,11 @@ def ma_rechner():
         print(e)
         print("Es scheint so als hättest etwas versucht, was in der Mathematik nicht funktioniert!")
 
+
 def main():
+
+
+
     # zufällige Antworten generieren
     random_antwort = [
         "Oh, wirklich",
@@ -77,9 +87,10 @@ def main():
         "essen": "Ich bin eine Maschine, ich habe keine Geschmacksknospen :C",
         "aussehen": ["Du bist wunderschön", "Dein Aussehen ist großartig","Du hast schöne Augen","Du slayst","Dein Style ist sehr cool","Du riechst nach Old Spice, mega nice *sniff*","Du wirkst sehr talentiert","Du hast nen coolen Vibe","Big Dick energy","Du bist ein richtiger Schnuggiputz uwu"],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
-        "uhrzeit": "Bitte hier Uhrzeit Value eingeben",
-        "mathe": ma_rechner, #Ma_rechner wird hier gesetzt
-        "findest": ["Gefällt mir !","Das ist echt cool !","slayed mega !","Sehr gut !","finde ich gut","naja könnte besser sein"]
+        "rechnen": ma_rechner, #Ma_rechner wird hier gesetzt
+        "findest": ["Gefällt mir !","Das ist echt cool !","slayed mega !","Sehr gut !","finde ich gut","naja könnte besser sein"],
+        "uhrzeit":current_time,
+
     }
 
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
@@ -105,7 +116,9 @@ def main():
                 #Ma_rechner wird hier initialisiert
                 elif einzel_woerter == "mathe":
                     reactions[einzel_woerter]()
-
+                #Uhrzeit von datetime wird übergeben
+                elif einzel_woerter == "uhrzeit":
+                    print("Wir haben es gerade: "+current_time)
                 else:
                     print(reactions[einzel_woerter])
                 antwort_gefunden = True
