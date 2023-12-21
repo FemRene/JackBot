@@ -2,18 +2,6 @@ import random
 from datetime import datetime
 import pytz
 
-class Benutzer:
-
-    def __init__(self,name,height,eyecolor,haircolor):
-        self.name = name
-        self.height = height
-    def info(self):
-        pass
-    
-    def delete(self):
-        pass
-
-
 #Timezone Berlin
 zeitzone_berlin = pytz.timezone('Europe/Berlin')
 #Uhrzeit initialisieren
@@ -21,6 +9,28 @@ now = datetime.now(zeitzone_berlin)
 #Derzeitige Uhrzeit initialisieren
 current_time = now.strftime("%H:%M:%S")
 
+#Benutzerklasse um Daten zu erfassen
+class Benutzer:
+    def __init__(self,name,height):
+        self.name = name
+        self.height = height
+
+    def info(self):
+        pass
+    
+    def delete(self):
+        pass
+#Nutzer informationen in der Klasse "benutzer" speichern
+def save_user_name(benutzer):
+    if benutzer is None:
+        name = input("Wie ist dein Name?: ")
+        height = input("Wie groß bist du in cm?: ")
+        benutzer = Benutzer(name, height)
+        print(f"Benutzer '{name}' mit der Größe '{height} cm' wurde erstellt.")
+    else:
+        print("Ein Benutzer existiert bereits.")
+
+    return benutzer
 #Yes/No schleife für funktionen
 def input_yes_no(text):
     y = input(text)
@@ -94,50 +104,42 @@ def dreisatz():
         print("Die Antwort ist: "+str(dsumme))
 #cm in Inch
 def incm():
-
     while True:
-        x = input_yes_no("Willst du den CM/INCH umrechner benutzen?(Y/N): ")
+        x = input_yes_no("Willst du den CM/INCH Umrechner benutzen? (Y/N): ")
         if not x:
             break
-    einheit = string_input("Welche Einheit hat das Maß?(cm/inch): ")
+        
+        einheit = input("Welche Einheit hat das Maß? (cm/inch): ")
 
-    while einheit is True:
-        if einheit =="cm":
-            cm = int_input("Größe?: ")
-            inch = cm*2,54
-            print(str(cm)+"cm sind: "+str(inch)+"inch")
-            return True
-        elif einheit =="inch":
-            inch1 = int_input("Größe?: ")
-            cm1 = inch1/2,54
-            print(str(inch1)+"inch sind: "+str(cm1)+"inch")
-            return True
+        if einheit == "cm":
+            cm = int(input("Größe in cm?: "))
+            inch = cm * 2.54
+            print(f"{cm}cm sind: {inch}inch")
+        elif einheit == "inch":
+            inch = int(input("Größe in inch?: "))
+            cm = inch / 2.54
+            print(f"{inch}inch sind: {cm}cm")
         else:
-            return False
+            print("Ungültige Eingabe. Bitte 'cm' oder 'inch' wählen.")
 #FC umrechner
 def fc():
-
     while True:
-        x = input_yes_no("Willst du den Fahrenheit/Celsius umrechner benutzen(Y/N): ")
+        x = input_yes_no("Willst du den Fahrenheit/Celsius Umrechner benutzen? (Y/N): ")
         if not x:
             break
     
-    einheit = string_input("Welche Einheit hat das Maß?(Fahrenheit/Celsius)")
-    einheit = einheit.upper
+        einheit = input("Welche Einheit hat das Maß? (Fahrenheit/Celsius): ").upper()
 
-    while einheit is True:
-        if einheit =="FAHRENHEIT":
-            fa = float_input("Wie viel Grad Fahrenheit?: ")
-            gradcelsius = fa/1,8-32
-            print(str(fa)+"Grad Fahrenheit sind: "+str(gradcelsius)+"inch")
-            return True
-        elif einheit =="CELSIUS":
-            gradcelsius1 = float_input("Wie viel Grad Celsius?: ")
-            fa1 = gradcelsius1*1,8+32
-            print(str(gradcelsius1)+"°C sind: "+str(fa1)+"°F")
-            return True
+        if einheit == "FAHRENHEIT":
+            fa = float(input("Wie viel Grad Fahrenheit?: "))
+            gradcelsius = (fa - 32) / 1.8
+            print(f"{fa} Grad Fahrenheit sind: {gradcelsius} Grad Celsius")
+        elif einheit == "CELSIUS":
+            gradcelsius = float(input("Wie viel Grad Celsius?: "))
+            fa = (gradcelsius * 1.8) + 32
+            print(f"{gradcelsius}°C sind: {fa}°F")
         else:
-            return False
+            print("Ungültige Eingabe. Bitte 'Fahrenheit' oder 'Celsius' wählen.")
 #Prozent rechnen
 def prozentrechnen():
 
@@ -160,6 +162,7 @@ def prozentrechnen():
 
     prozentsatz = prozentwert * 100 / grundwert
     print(str(prozentwert)+" von "+str(grundwert)+" Sind: "+str(prozentsatz)+"%")
+benutzer = None
 #Main funktion
 def main():
     # zufällige Antworten generieren
@@ -198,9 +201,9 @@ def main():
         "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen",
         "taschenrechner":dreisatz,
         "cm rechner":incm,
-        "celsius umrechnen":fc
-        "prozent":prozentrechnen
-        
+        "celsius umrechnen":fc,
+        "prozent":prozentrechnen,
+        "mein name ist": lambda benutzer=benutzer: save_user_name(benutzer),
     }
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
@@ -217,7 +220,9 @@ def main():
         antwort_gefunden = False
         for key in reactions:
             if key.lower() in userinput.lower():
-                if isinstance(reactions[key], list):
+                if callable(reactions[key]):
+                    reactions[key]()
+                elif isinstance(reactions[key], list):
                     print(random.choice(reactions[key]))
                 else:
                     print(reactions[key])
