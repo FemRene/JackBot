@@ -2,6 +2,18 @@ import random
 from datetime import datetime
 import pytz
 
+class Benutzer:
+
+    def __init__(self,name,height,eyecolor,haircolor):
+        self.name = name
+        self.height = height
+    def info(self):
+        pass
+    
+    def delete(self):
+        pass
+
+
 #Timezone Berlin
 zeitzone_berlin = pytz.timezone('Europe/Berlin')
 #Uhrzeit initialisieren
@@ -175,19 +187,20 @@ def main():
                     "Du hast nen coolen Vibe",
                     "Big Dick energy",
                     "Du bist ein richtiger Schnuggiputz uwu"],
-        "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "wie findest du meine Aussehen?": ["Gefällt mir !",
-                                            "Das ist echt cool !",
-                                            "slayed mega !",
-                                            "Sehr gut !",
-                                            "finde ich gut",
-                                            "Ich glaube längre Haare würden dir besser stehen."],
+                                    "Das ist echt cool !",
+                                    "slayed mega !",
+                                    "Sehr gut !",
+                                    "finde ich gut",
+                                    "Ich glaube längre Haare würden dir besser stehen."],
+        "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "uhrzeit":current_time,
         "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen",
         "taschenrechner":dreisatz,
         "cm rechner":incm,
         "celsius umrechnen":fc
         "prozent":prozentrechnen
+        
     }
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
