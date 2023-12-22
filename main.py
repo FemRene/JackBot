@@ -432,7 +432,7 @@ print(mein_kuhlschrank.hohe)
 print(mein_kuhlschrank.e_klasse)
 print(mein_kuhlschrank.volumen)
 
-#Kuhlschrank.an()
+mein_kuhlschrank.an()
 #Kuhlschrank.aus()
 
 #_______________________________________________________________________________________________________________________

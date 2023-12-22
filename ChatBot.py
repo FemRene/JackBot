@@ -213,7 +213,20 @@ def main():
         "Speicher meine Daten": lambda benutzer=benutzer: save_user_name(benutzer),
         "Benutzer info": lambda: benutzer.info() if benutzer else print("Kein Benutzer gespeichert."),
         "Benutzer löschen": lambda: benutzer.delete() if benutzer else print("Kein Benutzer gespeichert."),
+        "wie geht es dir?": "Mir geht es gut, danke! Und dir?",
+        "gut, danke": "Das freut mich zu hören!",
+        "schlecht": "Oh, das tut mir leid zu hören.",
+        "was machst du gerne?": "Ich unterhalte mich gerne und lerne ständig dazu!",
+        "hast du Geschwister?": "Ich bin ein Einzelkind, aber ich habe viele Geschwister-Bots!",
+        "bist du ein Mensch?": "Ich bin ein Chatbot, programmiert, um zu helfen und zu unterhalten!",
+        "magst du Musik?": "Musik ist toll! Was ist dein Lieblingslied?",
+        "ich bin müde": "Vielleicht solltest du eine Pause machen und dich ausruhen.",
+        "erzähl mir einen Witz": "Warum hat der Mathematikbuch geweint? Weil es viele Probleme hatte!",
+        "was ist dein Ziel?": "Mein Ziel ist es, dir zu helfen und dich zu unterhalten!",
+        "was ist das Wetter?": "Leider habe ich keinen Zugriff auf Wetterdaten.",
+        "wie alt bist du?": "Ich bin ein virtueller Assistent, Alter ist für mich irrelevant!",
     }
+
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
     print("Wenn du mich beenden willst schreib einfach 'bye'")
