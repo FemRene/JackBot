@@ -11,15 +11,21 @@ current_time = now.strftime("%H:%M:%S")
 
 #Benutzerklasse um Daten zu erfassen
 class Benutzer:
-    def __init__(self,name,height):
+    def __init__(self, name, height):
         self.name = name
         self.height = height
 
     def info(self):
-        pass
-    
+        print("Folgender Benutzer ist gespeichert:")
+        print(f"Name: {self.name}, Größe: {self.height} cm")
+
     def delete(self):
-        pass
+        self.name = None
+        self.height = None
+        print("Die Benutzer Information wurde erfolgreich gelöscht")
+
+benutzer = None
+
 #Nutzer informationen in der Klasse "benutzer" speichern
 def save_user_name(benutzer):
     if benutzer is None:
@@ -31,6 +37,7 @@ def save_user_name(benutzer):
         print("Ein Benutzer existiert bereits.")
 
     return benutzer
+
 #Yes/No schleife für funktionen
 def input_yes_no(text):
     y = input(text)
@@ -198,12 +205,14 @@ def main():
                                     "Ich glaube längre Haare würden dir besser stehen."],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "uhrzeit":current_time,
-        "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen",
+        "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen, Speicher meine Daten, Benutzer info, Benutzer löschen",
         "taschenrechner":dreisatz,
         "cm rechner":incm,
         "celsius umrechnen":fc,
         "prozent":prozentrechnen,
-        "mein name ist": lambda benutzer=benutzer: save_user_name(benutzer),
+        "Speicher meine Daten": lambda benutzer=benutzer: save_user_name(benutzer),
+        "Benutzer info": lambda: benutzer.info() if benutzer else print("Kein Benutzer gespeichert."),
+        "Benutzer löschen": lambda: benutzer.delete() if benutzer else print("Kein Benutzer gespeichert."),
     }
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
