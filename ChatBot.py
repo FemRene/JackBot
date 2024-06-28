@@ -205,8 +205,8 @@ def main():
                                     "Ich glaube längre Haare würden dir besser stehen."],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "uhrzeit":current_time,
-        "was kannst du":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen, Speicher meine Daten, Benutzer info, Benutzer löschen",
-        "taschenrechner":dreisatz,
+        "":"Meine features sind: Taschenrechner, Dreisatz(Einfach), inch/cm Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen, Speicher meine Daten, Benutzer info, Benutzer löschen",
+        "taswas kannst duchenrechner":dreisatz,
         "cm rechner":incm,
         "celsius umrechnen":fc,
         "prozent":prozentrechnen,
@@ -225,11 +225,38 @@ def main():
         "was ist dein Ziel?": "Mein Ziel ist es, dir zu helfen und dich zu unterhalten!",
         "was ist das Wetter?": "Leider habe ich keinen Zugriff auf Wetterdaten.",
         "wie alt bist du?": "Ich bin ein virtueller Assistent, Alter ist für mich irrelevant!",
+        "Benutzer":"Mit 'Benutzer info' Kannst du dir deine Daten anzeigen lassen. \nMit 'Benutzer löschen' kannst du deine Daten löschen. \nMit 'Speicher meine Daten' kannst du ein Benutzer anlegen.",
     }
 
+    print("""                    *****************
+               ******               ******
+           ****                           ****
+        ****                                 ***
+      ***                                       ***
+     **           ***               ***           **
+   **           *******           *******          ***
+  **            *******           *******            **
+ **             *******           *******             **
+ **               ***               ***               **
+**                                                     **
+**       *                                     *       **
+**      **                                     **      **
+ **   ****                                     ****   **
+ **      **                                   **      **
+  **       ***                             ***       **
+   ***       ****                       ****       ***
+     **         ******             ******         **
+      ***            ***************            ***
+        ****                                 ****
+           ****                           ****
+               ******               ******
+                    *****************""")
+ 
     print("Hallo, ich bin JACK'O'BOT, ich hoffe du hast ein Schönen Tag")
     print("Bitte vergiss nicht, ich bin ein Roboter ich kann nicht's dafür wie mich mein Erschaffer Programiert hat.")
     print("Wenn du mich beenden willst schreib einfach 'bye'")
+    print("___________________________________________________________________________________________________________")
+    print("Wenn du mal nicht weiter kommst schreib einfach 'Was Kannst du?' dann zeig ich dir meine Features.")
 
     # Benutzereingabe initialisieren
     userinput = input(str("Über was möchtest du mit mir reden?: "))
