@@ -47,8 +47,8 @@ def input_yes_no(text):
 def ma_rechner():
     try:
         while input_yes_no("Willst du den Taschenrechner benutzen (Y/N): "):
-            operandie = input("Wie willst du rechnen? (+ - / *): ")
-            if operandie not in ['+', '-', '/', '*']:
+            operation = input("Wie willst du rechnen? (+ - / *): ")
+            if operation not in ['+', '-', '/', '*']:
                 print("Ungültige Operation!")
                 continue
 
@@ -56,20 +56,20 @@ def ma_rechner():
             zahl2 = int(input("Soll mit welcher Zahl berechnet werden?: "))
             summe = None
 
-            if operandie == '+':
+            if operation == '+':
                 summe = zahl1 + zahl2
-            elif operandie == '-':
+            elif operation == '-':
                 summe = zahl1 - zahl2
-            elif operandie == '*':
+            elif operation == '*':
                 summe = zahl1 * zahl2
-            elif operandie == '/':
+            elif operation == '/':
                 if zahl2 != 0:
                     summe = zahl1 / zahl2
                 else:
                     print("Du kannst nicht durch 0 dividieren.")
                     continue
 
-            print(f"{zahl1} {operandie} {zahl2} = {summe}")
+            print(f"{zahl1} {operation} {zahl2} = {summe}")
 
     except ValueError:
         print("Nur Zahlen sind erlaubt!")
@@ -169,7 +169,7 @@ def main():
             "Big Dick Energy",
             "Du bist ein richtiger Schnuggiputz uwu"
         ],
-        "wie findest du mein Aussehen?": [
+        "wie findest du mein aussehen?": [
             "Gefällt mir!",
             "Das ist echt cool!",
             "Slayed mega!",
@@ -179,11 +179,11 @@ def main():
         ],
         "lieblingsfarbe": "Meine Lieblingsfarbe ist Blau und deine?",
         "uhrzeit": current_time,
-        "Was kannst du?": "Meine Features sind: Taschenrechner, Dreisatz (Einfach), Inch/CM Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen, Speicher meine Daten, Benutzer info, Benutzer löschen",
+        "was kannst du?": "Meine Features sind: Taschenrechner, Dreisatz (Einfach), Inch/CM Rechner, Fahrenheit/Celsius Rechner, Prozentrechnen, Speicher meine Daten, Benutzer info, Benutzer löschen",
         "taschenrechner": ma_rechner,
         "dreisatz": dreisatz,
         "cm rechner": incm,
-        "celsius umrech": fc,
+        "celsius umrechner": fc,
         "prozent": prozentrechnen,
         "speicher meine daten": save_user_name,
         "benutzer info": lambda: benutzer.info() if benutzer else print("Kein Benutzer gespeichert."),
@@ -192,28 +192,25 @@ def main():
         "gut, danke": "Das freut mich zu hören!",
         "schlecht": "Oh, das tut mir leid zu hören.",
         "was machst du gerne?": "Ich unterhalte mich gerne und lerne ständig dazu!",
-        "hast du Geschwister?": "Ich bin ein Einzelkind, aber ich habe viele Geschwister-Bots!",
-        "bist du ein Mensch?": "Ich bin ein Chatbot, programmiert, um zu helfen und zu unterhalten!",
-        "magst du Musik?": "Musik ist toll! Was ist dein Lieblingslied?",
+        "hast du geschwister?": "Ich bin ein Einzelkind, aber ich habe viele Geschwister-Bots!",
+        "bist du ein mensch?": "Ich bin ein Chatbot, programmiert, um zu helfen und zu unterhalten!",
+        "magst du musik?": "Musik ist toll! Was ist dein Lieblingslied?",
         "ich bin müde": "Vielleicht solltest du eine Pause machen und dich ausruhen.",
-        "erzähl mir einen Witz": "Warum hat das Mathematikbuch geweint? Weil es viele Probleme hatte!",
-        "was ist dein Ziel?": "Mein Ziel ist es, dir zu helfen und dich zu unterhalten!",
-        "was ist das Wetter?": "Leider habe ich keinen Zugriff auf Wetterdaten.",
+        "erzähl mir einen witz": "Warum hat das Mathematikbuch geweint? Weil es viele Probleme hatte!",
+        "was ist dein ziel?": "Mein Ziel ist es, dir zu helfen und dich zu unterhalten!",
+        "was ist das wetter?": "Leider habe ich keinen Zugriff auf Wetterdaten.",
         "wie alt bist du?": "Ich bin ein virtueller Assistent, Alter ist für mich irrelevant!",
-        "benutzer": "Mit 'Benutzer info' kannst du dir deine Daten anzeigen lassen. \nMit 'Benutzer löschen' kannst du deine Daten löschen. \nMit 'Speicher meine Daten' kannst du einen Benutzer anlegen."
-        "help": """ Lieblingsfarbe = Ich sag dir welche meine LIelingsfarbe ist-
-        
-                    uhrzeit             = Ich sag dir, in deiner Zeitzone, deine Uhrzeit an. 
-                    
-                    Was kannst du?      = Gibt dir eine kurze Übersicht über meine Features.
-                    
-                    taschenrechner      = Ich habe einen eingebauten Taschenrechner, damit kannst ihn aufrufen.
-                    
-                    dreisatz            = Damit kannst du den Dreisatz ausrechnen.
-                    
-                    cm rechner          = Damit kannst du CM in INCH umrechnen.
-                    
-                    celsius umrechner   = Damit kannst du Celsius in Fahrenheit und andersrum umrechnen."""
+        "benutzer": "Mit 'Benutzer info' kannst du dir deine Daten anzeigen lassen. \nMit 'Benutzer löschen' kannst du deine Daten löschen. \nMit 'Speicher meine Daten' kannst du einen Benutzer anlegen.",
+        "help": """ 
+            lieblingsfarbe       = Ich sage dir, welche meine Lieblingsfarbe ist.
+            uhrzeit              = Ich sage dir, in deiner Zeitzone, deine Uhrzeit an. 
+            was kannst du?       = Gibt dir eine kurze Übersicht über meine Features.
+            taschenrechner       = Ich habe einen eingebauten Taschenrechner, damit kannst du rechnen.
+            dreisatz             = Damit kannst du den Dreisatz ausrechnen.
+            cm rechner           = Damit kannst du cm in Inch umrechnen.
+            celsius umrechner    = Damit kannst du Celsius in Fahrenheit und umgekehrt umrechnen.
+            prozent              = Damit kannst du prozentrechnen.
+        """
     }
 
     print("""                    *****************
@@ -244,14 +241,12 @@ def main():
     print("Bitte vergiss nicht, ich bin ein Roboter. Ich kann nichts dafür, wie mich mein Erschaffer programmiert hat.")
     print("Wenn du mich beenden willst, schreibe einfach 'bye'.")
     print("___________________________________________________________________________________________________________")
-    print("Wenn du mal nicht weiter kommst, schreibe einfach 'Was kannst du?' dann zeige ich dir meine Features.")
+    print("Wenn du mal nicht weiter kommst, schreibe einfach 'was kannst du?' dann zeige ich dir meine Features.")
 
     # Benutzereingabe initialisieren
     userinput = input("Über was möchtest du mit mir reden?: ").strip().lower()
     
     while userinput != "bye":
-        userinput = input("Deine Frage/Antwort?: ").strip().lower()
-
         antwort_gefunden = False
         for key in reactions:
             if key in userinput:
@@ -266,6 +261,8 @@ def main():
 
         if not antwort_gefunden:
             print(random.choice(random_antwort))
+        
+        userinput = input("Deine Frage/Antwort?: ").strip().lower()
 
     print("Einen schönen Tag wünsche ich dir!")
 
